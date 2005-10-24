@@ -1,0 +1,41 @@
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <RDF:Description about="urn:mozilla:extension:{31E65147-5A53-4e52-8A64-FF6EBFA36D76}">
+    <em:updates>
+      <!-- This is a list of all available updates. They must have unique 
+              URIs, per RDF Grammar rules, I've tacked the version number onto
+              the end to differentiate versions -->
+      <RDF:Seq>
+        <RDF:li resource="urn:mozilla:extension:{31E65147-5A53-4e52-8A64-FF6EBFA36D76}:0.5.18"/>
+      </RDF:Seq>
+    </em:updates>
+
+    <!-- Firefox 0.9 did not support the above RDF grammar, only the following
+            two simple properties, so we also provide them here for people 
+            upgrading from Firefox 0.9. Note that we've used the larger of the two 
+            updates here, since Firefox 0.9 was not smart enough to have any of the 
+            logic to patch its Extensions datasource with information about existing 
+            Extensions that are also compatible with newer versions of 
+            the app. -->
+    <em:version>0.5.18</em:version>
+    <em:updateLink>http://www.jamescookie.com/extensions/aub-0.5.18.xpi</em:updateLink>
+  </RDF:Description>
+
+  <!-- This Description describes updates available to version 2.3 of 
+          FooExtension - (format of the targetApplication object is the
+          same as for the install.rdf file, with the exception of the
+          em:updateLink property, which contains a URL to the updated XPI) -->
+  <RDF:Description about="urn:mozilla:extension:{31E65147-5A53-4e52-8A64-FF6EBFA36D76}:0.3">
+    <em:version>0.5.18</em:version>
+    <em:targetApplication>
+      <Description>
+        <em:id>{31E65147-5A53-4e52-8A64-FF6EBFA36D76}</em:id>
+        <em:minVersion>0.9</em:minVersion>
+        <em:maxVersion>1.5</em:maxVersion>
+        <em:updateLink>http://www.jamescookie.com/extensions/aub-0.5.18.xpi</em:updateLink>
+      </Description>
+    </em:targetApplication>
+  </RDF:Description>  
+
+</RDF:RDF>
