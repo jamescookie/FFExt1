@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="firefox extension" default="build">
+
+    <property name="extension.name" value="aub" />
+    <property name="extension.full.name" value="Advanced URL Builder" />
+    <property name="extension.author" value="James Cook" />
+    <property name="extension.version" value="0.5.18" />
+    <property name="base.url" value="http://www.jamescookie.com" />
+    <property name="extensions.url" value="${base.url}/extensions/" />
+    <property name="extension.description" value="Append selected text to the URL of your favourite site." />
+
+
+    <property name="build.directory" value="build" />
+    <property name="tmp.directory" value="tmp" />
+
+    <target name="build" depends="clean">
+        <mkdir dir="${build.directory}"/>
+        <mkdir dir="${tmp.directory}"/>
+
+        <copy todir="${tmp.directory}">
+            <fileset dir="${extension.name}">
+                <exclude name="CVS/**"/>
+				<exclude name="**/*.png"/>
+            </fileset>
+            <filterset>
+                <filter token="AUTHOR" value="${extension.author}"/>
+                <filter token="VERSION" value="${extension.version}"/>
+                <filter token="EXTENSION" value="${extension.name}"/>
+                <filter token="EXTENSION_FULL" value="${extension.full.name}"/>
+                <filter token="BASE_URL" value="${base.url}"/>
+                <filter token="EXTENSIONS_URL" value="${extensions.url}"/>
+                <filter token="DESCRIPTION" value="${extension.description}"/>
+            </filterset>
+        </copy>
+        <copy todir="${tmp.directory}">
+            <fileset dir="${extension.name}">
+				<include name="**/*.png"/>
+            </fileset>
+        </copy>
+
+        <mkdir dir="${build.directory}/chrome"/>
+        <zip destfile="${build.directory}/chrome/${extension.name}.jar" basedir="${tmp.directory}/chrome"/>
+        <zip destfile="${build.directory}/${extension.name}-${extension.version}.xpi">
+            <fileset dir="${tmp.directory}">
+                <exclude name="chrome/**"/>
+            </fileset>
+            <fileset dir="${build.directory}">
+            </fileset>
+        </zip>
+        <delete dir="${build.directory}/chrome"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build.directory}" failonerror="true"/>
+        <delete dir="${tmp.directory}" failonerror="true"/>
+    </target>
+</project>

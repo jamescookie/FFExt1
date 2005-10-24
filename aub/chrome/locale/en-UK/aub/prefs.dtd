@@ -1,0 +1,6 @@
+<!-- Options -->
+<!ENTITY @EXTENSION@.prefs.title "@EXTENSION_FULL@ Options">
+<!ENTITY @EXTENSION@.prefs.intro "Enter the URLs to use here">
+
+<!ENTITY @EXTENSION@.prefs.nameLabel "Name">
+<!ENTITY @EXTENSION@.prefs.urlLabel "URL">

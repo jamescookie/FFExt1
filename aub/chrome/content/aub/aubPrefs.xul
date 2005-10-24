@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://@EXTENSION@/locale/prefs.dtd">
+
+<dialog id="@EXTENSION@Prefs"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="accept, cancel"
+	onload="init();"
+	ondialogaccept="return accept();"
+	title="&@EXTENSION@.prefs.title;">
+	
+	<script type="application/x-javascript" src="chrome://@EXTENSION@/content/@EXTENSION@Prefs.js"/>
+
+	<label class="header" value="&@EXTENSION@.prefs.intro;" />
+	
+	<separator class="thin"/>
+
+	<grid flex="1">
+		<rows>
+			<row/>
+			<row/>
+			<row/>
+			<row/>
+		</rows>
+		<columns>
+			<column>
+				<label value=""/>
+				<label value="1"/>
+				<label value="2"/>
+				<label value="3"/>
+			</column>
+			<column>
+				<label value="&@EXTENSION@.prefs.nameLabel;"/>
+				<textbox id="name1"/>
+				<textbox id="name2"/>
+				<textbox id="name3"/>
+			</column>
+			<column flex="1" style="min-width: 400px;">
+				<label value="&@EXTENSION@.prefs.urlLabel;"/>
+				<textbox id="url1"/>
+				<textbox id="url2"/>
+				<textbox id="url3"/>
+			</column>
+		</columns>
+	</grid>
+</dialog>
