@@ -14,7 +14,6 @@
 		<em:iconURL>chrome://@EXTENSION@/skin/@EXTENSION@.png</em:iconURL>
 		<em:aboutURL>chrome://@EXTENSION@/content/about.xul</em:aboutURL>
 		<em:optionsURL>chrome://@EXTENSION@/content/@EXTENSION@Prefs.xul</em:optionsURL>
-		<em:updateURL>@EXTENSIONS_URL@update.rdf</em:updateURL>
 
 		<em:targetApplication>
 			<Description>
