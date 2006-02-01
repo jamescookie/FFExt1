@@ -6,22 +6,32 @@ var @EXTENSION@Var = {
 		var contextMenu = document.getElementById('contentAreaContextMenu');
 		contextMenu.addEventListener('popupshowing', function() {@EXTENSION@Var.prepareContextMenu();}, false);
 	},
-	
+
 	prepareContextMenu: function() {
-		var menuitem = document.getElementById("context-@EXTENSION@");
+        var menuitem = document.getElementById("context-@EXTENSION@");
 		if (menuitem) {
 			menuitem.hidden = !gContextMenu.isTextSelected;
 			if (!menuitem.hidden) {
-				var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
-				@EXTENSION@Var.addMenuLabel(1, prefs);
-				@EXTENSION@Var.addMenuLabel(2, prefs);
-				@EXTENSION@Var.addMenuLabel(3, prefs);
+                var popupmenu = document.getElementById("@EXTENSION@-popup");
+                var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+
+                // Remove anything there currently
+                for (var i = popupmenu.childNodes.length - 1; i >= 0; i--) {
+                    popupmenu.removeChild(popupmenu.childNodes.item(i));
+                }
+
+                var count = prefs.getIntPref("@EXTENSION@.iterator");
+                for (var i = 1; i <= count; i++) {
+                    var tempItem = document.createElement("menuitem");
+                    @EXTENSION@Var.addMenuLabel(tempItem, i, prefs);
+                    tempItem.setAttribute("oncommand", "@EXTENSION@Var.@EXTENSION@(gContextMenu.searchSelected(), '"+i+"');");
+                    popupmenu.appendChild(tempItem);
+                }
 			}
 		}
 	},
 
-	addMenuLabel: function(num, prefs) {
-		var menuitem = document.getElementById("@EXTENSION@-menu"+num);
+	addMenuLabel: function(menuitem, num, prefs) {
 		var label = "";
 		if (prefs.getPrefType("@EXTENSION@.name"+num) == prefs.PREF_STRING) {
 			label = prefs.getCharPref("@EXTENSION@.name"+num);
@@ -29,7 +39,7 @@ var @EXTENSION@Var = {
 		if (label == "") {
 			label = "Unknown";
 		}
-		menuitem.label = label;
+		menuitem.setAttribute("label", label);
 	},
 
 	@EXTENSION@: function(thing, urlToUse) {

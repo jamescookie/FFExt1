@@ -8,38 +8,31 @@
 	onload="init();"
 	ondialogaccept="return accept();"
 	title="&@EXTENSION@.prefs.title;">
-	
+
 	<script type="application/x-javascript" src="chrome://@EXTENSION@/content/@EXTENSION@Prefs.js"/>
 
 	<label class="header" value="&@EXTENSION@.prefs.intro;" />
-	
+
 	<separator class="thin"/>
 
+    <label value="&@EXTENSION@.prefs.iteratorLabel;"/>
+    <textbox id="iterator" style="width:20px" maxlength="2"/>
+
+    <separator class="thin"/>
+
 	<grid flex="1">
-		<rows>
-			<row/>
-			<row/>
-			<row/>
+		<rows id="rows">
 			<row/>
 		</rows>
 		<columns>
-			<column>
+			<column id="numberColumn">
 				<label value=""/>
-				<label value="1"/>
-				<label value="2"/>
-				<label value="3"/>
 			</column>
-			<column>
+			<column id="nameColumn">
 				<label value="&@EXTENSION@.prefs.nameLabel;"/>
-				<textbox id="name1"/>
-				<textbox id="name2"/>
-				<textbox id="name3"/>
 			</column>
-			<column flex="1" style="min-width: 400px;">
+			<column id="urlColumn" flex="1" style="min-width: 400px;">
 				<label value="&@EXTENSION@.prefs.urlLabel;"/>
-				<textbox id="url1"/>
-				<textbox id="url2"/>
-				<textbox id="url3"/>
 			</column>
 		</columns>
 	</grid>

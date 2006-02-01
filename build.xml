@@ -4,7 +4,7 @@
     <property name="extension.name" value="aub" />
     <property name="extension.full.name" value="Advanced URL Builder" />
     <property name="extension.author" value="James Cook" />
-    <property name="extension.version" value="0.5.21" />
+    <property name="extension.version" value="1.0" />
     <property name="base.url" value="http://www.jamescookie.com" />
     <property name="extensions.url" value="${base.url}/extensions/" />
     <property name="extension.description" value="Append selected text to the URL of your favourite site." />
@@ -13,9 +13,11 @@
     <property name="build.directory" value="build" />
     <property name="tmp.directory" value="tmp" />
 
-    <target name="build" depends="clean">
+    <target name="build" depends="clean,increment.version">
         <mkdir dir="${build.directory}"/>
         <mkdir dir="${tmp.directory}"/>
+
+        <property file="version.properties"/>
 
         <copy todir="${tmp.directory}">
             <fileset dir="${extension.name}">
@@ -24,7 +26,7 @@
             </fileset>
             <filterset>
                 <filter token="AUTHOR" value="${extension.author}"/>
-                <filter token="VERSION" value="${extension.version}"/>
+                <filter token="VERSION" value="${extension.version}.${build.number}"/>
                 <filter token="EXTENSION" value="${extension.name}"/>
                 <filter token="EXTENSION_FULL" value="${extension.full.name}"/>
                 <filter token="BASE_URL" value="${base.url}"/>
@@ -40,7 +42,7 @@
 
         <mkdir dir="${build.directory}/chrome"/>
         <zip destfile="${build.directory}/chrome/${extension.name}.jar" basedir="${tmp.directory}/chrome"/>
-        <zip destfile="${build.directory}/${extension.name}-${extension.version}.xpi">
+        <zip destfile="${build.directory}/${extension.name}-${extension.version}.${build.number}.xpi">
             <fileset dir="${tmp.directory}">
                 <exclude name="chrome/**"/>
             </fileset>
@@ -53,5 +55,11 @@
     <target name="clean">
         <delete dir="${build.directory}" failonerror="true"/>
         <delete dir="${tmp.directory}" failonerror="true"/>
+    </target>
+
+    <target name="increment.version">
+        <propertyfile file="version.properties" comment="Build version info">
+            <entry key="build.number" default="0" type="int" operation="+" value="1"/>
+        </propertyfile>
     </target>
 </project>

@@ -1,3 +1,4 @@
+pref("@EXTENSION@.iterator", 3);
 pref("@EXTENSION@.name1", "Google Maps");
 pref("@EXTENSION@.name2", "Multimap");
 pref("@EXTENSION@.name3", "Streetmap");
