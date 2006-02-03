@@ -12,7 +12,7 @@
     <div id="block_1">
       <div id="header">
         <div class='shadow' id='shadow_1' style="float:left; padding-top:10px;">Advanced URL Builder Homepage</div>
-          <a class="imageRight" href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=59"><img border="0" alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/180x60/safer.gif"/></a>
+          <a class="imageRight" href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=59"><img alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/180x60/safer.gif"/></a>
         <div class="clearing"></div>
       </div>
       <h1>Download</h1>
@@ -23,7 +23,7 @@
       <div class="layout">
         <h2>Set your options</h2>
         <p>Firstly and most importantly, you need to set your options.<br/>Out of the box, <span class="aub">Advanced URL Builder</span> comes with three map search engines. If this is all you need it for then great, you can skip this part, but most users will want to open their own favourite sites using this tool.</p>
-        <img src="options.png" class="imageRight"/>
+        <img src="options.png" class="imageRight" alt="options"/>
         <p>To find the options (unreasonably obscure in firefox) go to: <span class="monospaced"><u>T</u>ools</span>, <span class="monospaced"><u>E</u>xtensions</span>. You will then get a list of the extensions you have installed. Select <span class="aub">Advanced URL Builder</span> and click <span class="monospaced"><u>O</u>ptions</span>.</p>
         <p>
           Whatever 'Name' that you give to the options here will be displayed on the popup menu (marked 'A').<br/>
@@ -33,7 +33,7 @@
       </div>
       <div class="layout">
         <h2>Look for something to find</h2>
-        <img src="popupmenu.png" class="imageRight"/>
+        <img src="popupmenu.png" class="imageRight" alt="pop-up menu"/>
         <p>With your options chosen, you are now free to use the <span class="aub">Advanced URL Builder</span>.</p>
         <p>On any web page, you can invoke the <span class="aub">Advanced URL Builder</span> by highlighting some text (marked '2') and right-clicking.</p>
         <p>You then select an option that you would like to use (marked 'A') and the magic happens...</p>
@@ -41,7 +41,7 @@
       </div>
       <div class="layout">
         <h2>Result!</h2>
-        <img src="result.png" class="imageRight" />
+        <img src="result.png" class="imageRight" alt="result"/>
         <p>The <span class="aub">Advanced URL Builder</span> looks up the option you have chosen, gets the URL that you gave (marked '1') and appends the highlighted text to the end of it (marked '2').</p>
         <p>The resulting complete url is then opened in a new tab.&dagger;</p>
         <p>Note that '%20' has been added in place of the space in this example as a space is an invalid URL character.</p>
@@ -130,16 +130,14 @@
       <div class="layout">
         <h2>Viewing source</h2>
         <p>If the above method doesn't work, you only really have one choice, to look at the code.</p>
-        <p>
-          To do this
-          <ul>
-            <li>go to the page you are interested in</li>
-            <li>highlight the area around the text box where you type your search criteria into</li>
-            <li>right click</li>
-            <li>select the option 'View Selection Source'</li>
-          </ul>
-          A window will open with a bunch of code in it and a portion selected.
-        </p>
+        <p>To do this:</p>
+        <ul>
+          <li>go to the page you are interested in</li>
+          <li>highlight the area around the text box where you type your search criteria into</li>
+          <li>right click</li>
+          <li>select the option 'View Selection Source'</li>
+        </ul>
+        <p>A window will open with a bunch of code in it and a portion selected.</p>
         <p>This can be a bit daunting, but bear with it, you are looking for a bit of code that looks like <span class="monospaced">&lt;input ... type="text" ... &gt;</span>, where the ... can be other attributes. The important part is the <span class="monospaced">type="text"</span>, this means it's a text box (Note: 'text' is the default, so the 'type' might be missing altogether).</p>
         <p>Now you have found the text box you usually type stuff into, you need its name. Look for an attribute like <span class="monospaced">name="somename"</span>, you now know that the name is 'somename'.</p>
         <p>You now have to look for the form that surrounds the text box, hopefully it's not buried too far away. Look for the first <span class="monospaced">&lt;form ... &gt;</span> before the textbox (Note: you might have to select more of the web page to find this, or else you might have to view all the source!)</p>
