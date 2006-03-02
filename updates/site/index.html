@@ -15,17 +15,17 @@
           <a class="imageRight" href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=59"><img alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/180x60/safer.gif"/></a>
         <div class="clearing"></div>
       </div>
-      <h1>Intodution</h1>
+      <h1>Introduction</h1>
       <div class="layout">
         <p>Welcome to the <span class="aub">Advanced URL Builder</span> Homepage. This page seeks to answer any questions you might have about this Firefox extension, although not how it was built (that's for another day...)</p>
         <p>I guess you're asking &quot;What does this extension do for me?&quot;. Let me answer that by telling you why I first wrote the extension.</p>
         <p>I did a search that resulted in a load of postcodes (zipcodes) being displayed and I wanted to know where each of these places were. I cannot begin to tell you how tedious it was opening up a new browser, going to google maps and pasting in the postcode for the hundred or so results!</p>
-        <p>After failing to find a suitable extenstion that was already written I decided that the time had come to venture into the world of XUL and write my own.</p>
+        <p>After failing to find a suitable extension that was already written I decided that the time had come to venture into the world of XUL and write my own.</p>
         <p>So here it is; highlight any text, right click and search for it using whatever sites you have defined. It's the most generic solution to a common problem and hopefully you'll find it as useful as I do.</p>
       </div>
       <h1>Download</h1>
       <div class="layout">
-        Download the latest version of <span class="aub">Advanced URL Builder</span> <a href="latest.xpi">here</a>.
+        Download the latest version of <span class="aub">Advanced URL Builder</span> <a href="latest.xpi">here</a>, or the latest approved version from <a href="https://addons.mozilla.org/extensions/moreinfo.php?application=firefox&category=Search%20Tools&id=1399">Mozilla</a>.
       </div>
       <h1>Instructions for use</h1>
       <div class="layout">
@@ -34,7 +34,7 @@
         <img src="options.png" class="imageRight" alt="options"/>
         <p>To find the options (unreasonably obscure in firefox) go to: <span class="monospaced"><u>T</u>ools</span>, <span class="monospaced"><u>E</u>xtensions</span>. You will then get a list of the extensions you have installed. Select <span class="aub">Advanced URL Builder</span> and click <span class="monospaced"><u>O</u>ptions</span>.</p>
         <p>
-          Whatever 'Name' that you give to the options here will be displayed on the popup menu (marked 'A').<br/>
+          Whatever 'Name' you give to the options here will be displayed on the popup menu (marked 'A').<br/>
           The 'URL' is the corresponding URL that you want opened when you choose that option (marked '1').
         </p>
         <p>Note option three here 'Just open' and see <a href="#cool">Cool uses</a> below.</p>
@@ -86,6 +86,11 @@
             <td></td>
           </tr>
           <tr>
+            <td>eBay Negs</td>
+            <td>http://toolhaus.org/cgi-bin/negs?Dirn=Received+by&User=</td>
+            <td>Saves adding another extension</td>
+          </tr>
+          <tr>
             <td>Multimap</td>
             <td>http://multimap.com/map/places.cgi?client=public&amp;lang=&amp;advanced=&amp;quicksearch=</td>
             <td></td>
@@ -103,17 +108,17 @@
           <tr>
             <td>Yellow Pages</td>
             <td>http://www.yell.com/ucs/UcsSearchAction.do?searchType=classic&amp;location=SOMEPLACE&amp;keywords=</td>
-            <td>You'll have to replace SOMEPLACE with yor own postcode/town</td>
+            <td>You'll have to replace SOMEPLACE with your own postcode/town</td>
           </tr>
           <tr>
             <td>Scoot</td>
             <td>http://www.scoot.co.uk/search.php?towncounty=SOMEPLACE&amp;ikwd=</td>
-            <td>You'll have to replace SOMEPLACE with yor own postcode/town</td>
+            <td>You'll have to replace SOMEPLACE with your own postcode/town</td>
           </tr>
           <tr>
             <td>Thomson Local</td>
             <td>http://www.thomsonlocal.com/BusinessFinder.aspx?where=SOMEPLACE&amp;what=</td>
-            <td>You'll have to replace SOMEPLACE with yor own postcode/town</td>
+            <td>You'll have to replace SOMEPLACE with your own postcode/town</td>
           </tr>
         </table>
         <p>See below for how to make your own!</p>
@@ -155,7 +160,7 @@
         </table>
         <p>We know that we searched for 'test' so we need the appropriate key for this (as well as the '=' sign), which is '<span class="monospaced">q=</span>'.</p>
         <p>Putting it all together forms our first attempt at the URL: <span class="monospaced">http://www.google.co.uk/search?q=</span>. In your browser, you copy that in and put anything you like on the end to see if it works.</p>
-        <p>In the case of Google, this is actually all we need, but some of the other parameters might be important depending on what you need to do, experiment by adding them in and see the results (remember to add a '<span class="monospaced">&amp;</span>' to seperate the pairs).</p>
+        <p>In the case of Google, this is actually all we need, but some of the other parameters might be important depending on what you need to do, experiment by adding them in and see the results (remember to add a '<span class="monospaced">&amp;</span>' to separate the pairs).</p>
         <p>The last thing to remember is that <span class="aub">Advanced URL Builder</span> will append to the text you highlight <b>to the end</b>, so you will need to ensure that the URL ends with the appropriate parameter.</p>
       </div>
       <div class="layout">
@@ -178,7 +183,7 @@
           The form that surrounds the text box is <span class="monospaced">&lt;form action="/search" name="f"&gt;</span>, so the action we are interested in is '/search'.
         </p>
         <p>
-          Putting it all together, we take the host (http://www.google.co.uk), add the action, add a '<span class="monospaced">?</span>' to seperate the parameters, add the name of the text box, and finally add a '<span class="monospaced">=</span>'.<br/>
+          Putting it all together, we take the host (http://www.google.co.uk), add the action, add a '<span class="monospaced">?</span>' to separate the parameters, add the name of the text box, and finally add a '<span class="monospaced">=</span>'.<br/>
           Making: <span class="monospaced">http://www.google.co.uk/search?q=</span>
         </p>
       </div>
