@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Date Picker/Calendar</title>
+    <link rel="stylesheet" type="text/css" href="layout.css" />
+    <link rel="stylesheet" type="text/css" href="shadow.css" />
+    <link rel="stylesheet" type="text/css" href="extensions.css" />
+  </head>
+<body>
+<div id="wrapper_extra">
+  <div id="wrapper">
+    <div id="block_1">
+      <div id="header">
+        <div style="float:left; padding-top:10px;">Date Picker/Calendar Homepage</div>
+        <a class="imageRight" href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=59"><img alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/180x60/safer.gif"/></a>
+        <div class="clearing"></div>
+      </div>
+      <h1>Introduction</h1>
+      <div class="layout">
+        <p></p>
+      </div>
+      <h1>Download</h1>
+      <div class="layout">
+        Download the latest version of Date Picker <a href="latest.xpi">here</a>, or the latest approved version from <a href="https://addons.mozilla.org/extensions/moreinfo.php?application=firefox&amp;category=Search%20Tools&amp;id=1399">Mozilla</a>.
+      </div>
+      <h1>Options</h1>
+      <div class="layout">
+        <h2>Date Format</h2>
+        <p>You can put anything you like in this option and it will get interpreted and displayed in the text box below the calendar. Anything that isn't one of the special characters below will get displayed 'as is'.</p>
+        <p>For example if you enter 'You chose the %e day of %B, it was a %A' in the date format, each time you click on a date in the calendar, you'd get something like 'You chose the 31 day of March, it was a Friday'.</p>
+        <p>The magic characters are the following:</p>
+        <table border="0">
+          <tbody>
+            <tr><td valign="top"><tt>%a</tt></td><td valign="top">abbreviated weekday name </td></tr>
+            <tr><td valign="top"><tt>%A</tt></td><td valign="top">full weekday name</td></tr>
+            <tr><td valign="top"><tt>%b</tt></td><td valign="top">abbreviated month name </td></tr>
+            <tr><td valign="top"><tt>%B</tt></td><td valign="top">full month name</td></tr>
+            <tr><td valign="top"><tt>%C</tt></td><td valign="top">century number</td></tr>
+            <tr><td valign="top"><tt>%d</tt></td><td valign="top">the day of the month ( 00 .. 31 ) </td></tr>
+            <tr><td valign="top"><tt>%e</tt></td><td valign="top">the day of the month ( 0 .. 31 ) </td></tr>
+            <tr><td valign="top"><tt>%H</tt></td><td valign="top">hour ( 00 .. 23 )</td></tr>
+            <tr><td valign="top"><tt>%I</tt></td><td valign="top">hour ( 01 .. 12 )</td></tr>
+            <tr><td valign="top"><tt>%j</tt></td><td valign="top">day of the year (000 .. 366 ) </td></tr>
+            <tr><td valign="top"><tt>%k</tt></td><td valign="top">hour ( 0 .. 23 )</td></tr>
+            <tr><td valign="top"><tt>%l</tt></td><td valign="top">hour ( 1 .. 12 )</td></tr>
+            <tr><td valign="top"><tt>%m</tt></td><td valign="top">month ( 01 .. 12) </td></tr>
+            <tr><td valign="top"><tt>%M</tt></td><td valign="top">minute ( 00 .. 59) </td></tr>
+            <tr><td valign="top"><tt>%p</tt></td><td valign="top">'PM' or 'AM'</td></tr>
+            <tr><td valign="top"><tt>%P</tt></td><td valign="top">'pm' or 'am'</td></tr>
+            <tr><td valign="top"><tt>%S</tt></td><td valign="top">second ( 00 .. 59) </td></tr>
+            <tr><td valign="top"><tt>%s</tt></td><td valign="top">number of seconds since Epoch (since Jan 01 1970 00:00:00 UTC) </td></tr>
+            <tr><td valign="top"><tt>%t</tt></td><td valign="top">a tab character </td></tr>
+            <tr><td valign="top"><tt>%U, %W, %V</tt></td><td valign="top">the week number</td></tr>
+            <tr><td valign="top"><tt>%u</tt></td><td valign="top">the day of the week ( 1 .. 7, 1 = MON )</td></tr>
+            <tr><td valign="top"><tt>%w</tt></td><td valign="top">the day of the week ( 0 .. 6, 0 = SUN )</td></tr>
+            <tr><td valign="top"><tt>%y</tt></td><td valign="top">year without the century ( 00 .. 99 )</td></tr>
+            <tr><td valign="top"><tt>%Y</tt></td><td valign="top">year including the century ( ex. 1972 )</td></tr>
+            <tr><td valign="top"><tt>%%</tt></td><td valign="top">a literal <tt>%</tt> character</td></tr>
+          </tbody>
+        </table>
+        <p>
+          There are more algorithms for computing the week number. All
+          three specifiers currently implement the same one, as defined by ISO 8601:
+          'the week 01 is the week that has the Thursday in the current year, which is
+          equivalent to the week that contains the fourth day of January. Weeks
+          start on Monday.'
+        </p>
+      </div>
+      <!-- End of content -->
+      <div class="verticalalign">&nbsp;</div>
+    </div>
+    <div id="block_2" style="background-image: url(firefoxleft.png); ">
+      <div class="verticalalign">&nbsp;</div>
+    </div>
+    <div id="block_3" style="background-image: url(firefoxright.png); ">
+      <div class="verticalalign">&nbsp;</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

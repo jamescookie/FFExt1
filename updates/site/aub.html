@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Advanced URL Builder</title>
+    <link rel="stylesheet" type="text/css" href="layout.css" />
+    <link rel="stylesheet" type="text/css" href="shadow.css" />
+    <link rel="stylesheet" type="text/css" href="extensions.css" />
+  </head>
+<body>
+<div id="wrapper_extra">
+  <div id="wrapper">
+    <div id="block_1">
+      <div id="header">
+        <div style="float:left; padding-top:10px;">Advanced URL Builder Homepage</div>
+          <a class="imageRight" href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=59"><img alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/180x60/safer.gif"/></a>
+        <div class="clearing"></div>
+      </div>
+      <h1>Introduction</h1>
+      <div class="layout">
+        <p>Welcome to the <span class="aub">Advanced URL Builder</span> Homepage. This page seeks to answer any questions you might have about this Firefox extension, although not how it was built (that's for another day...)</p>
+        <p>I guess you're asking &quot;What does this extension do for me?&quot;. Let me answer that by telling you why I first wrote the extension.</p>
+        <p>I did a search that resulted in a load of postcodes (zipcodes) being displayed and I wanted to know where each of these places were. I cannot begin to tell you how tedious it was opening up a new browser, going to google maps and pasting in the postcode for the hundred or so results!</p>
+        <p>After failing to find a suitable extension that was already written I decided that the time had come to venture into the world of XUL and write my own.</p>
+        <p>So here it is; highlight any text, right click and search for it using whatever sites you have defined. It's the most generic solution to a common problem and hopefully you'll find it as useful as I do.</p>
+      </div>
+      <h1>Download</h1>
+      <div class="layout">
+        Download the latest version of <span class="aub">Advanced URL Builder</span> <a href="latest.xpi">here</a>, or the latest approved version from <a href="https://addons.mozilla.org/extensions/moreinfo.php?application=firefox&amp;category=Search%20Tools&amp;id=1399">Mozilla</a>.
+      </div>
+      <h1>Instructions for use</h1>
+      <div class="layout">
+        <h2>Set your options</h2>
+        <p>Firstly and most importantly, you need to set your options.<br/>Out of the box, <span class="aub">Advanced URL Builder</span> comes with three map search engines. If this is all you need it for then great, you can skip this part, but most users will want to open their own favourite sites using this tool.</p>
+        <img src="options.png" class="imageRight" alt="options"/>
+        <p>To find the options (unreasonably obscure in firefox) go to: <span class="monospaced"><u>T</u>ools</span>, <span class="monospaced"><u>E</u>xtensions</span>. You will then get a list of the extensions you have installed. Select <span class="aub">Advanced URL Builder</span> and click <span class="monospaced"><u>O</u>ptions</span>.</p>
+        <p>
+          Whatever 'Name' you give to the options here will be displayed on the popup menu (marked 'A').<br/>
+          The 'URL' is the corresponding URL that you want opened when you choose that option (marked '1').
+        </p>
+        <p>Note option three here 'Just open' and see <a href="#cool">Cool uses</a> below.</p>
+        <div class="clearing"></div>
+      </div>
+      <div class="layout">
+        <h2>Look for something to find</h2>
+        <img src="popupmenu.png" class="imageRight" alt="pop-up menu"/>
+        <p>With your options chosen, you are now free to use the <span class="aub">Advanced URL Builder</span>.</p>
+        <p>On any web page, you can invoke the <span class="aub">Advanced URL Builder</span> by highlighting some text (marked '2') and right-clicking.</p>
+        <p>You then select an option that you would like to use (marked 'A') and the magic happens...</p>
+        <div class="clearing"></div>
+      </div>
+      <div class="layout">
+        <h2>Result!</h2>
+        <img src="result.png" class="imageRight" alt="result"/>
+        <p>The <span class="aub">Advanced URL Builder</span> looks up the option you have chosen, gets the URL that you gave (marked '1') and appends the highlighted text to the end of it (marked '2').</p>
+        <p>The resulting complete url is then opened in a new tab.&dagger;</p>
+        <p>Note that '%20' has been added in place of the space in this example as a space is an invalid URL character.</p>
+        <div class="clearing"></div>
+        <p class="notes">&dagger;The tab will open in the same window, but whether it is selected or not depends on if you have ticked 'Select new tabs opened from links' in Firefox's Advanced options.</p>
+      </div>
+      <h1><a id="cool"/>Cool uses</h1>
+      <div class="layout">
+        <p>
+          Probably the coolest use of all is the 'Just open' option, whereby in the options you leave the URL part blank (see above), then anything highlighted is opened 'as-is'.<br/>
+          This enables you to highlight a URL (or part of a URL) on a page that isn't a link (or even if it is) and open as though it is. Saves all that slow copy and pasting.
+        </p>
+        <p>Here is a list of some of my favourites.</p>
+        <table border="1">
+          <tr>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Notes</th>
+          </tr>
+          <tr>
+            <td>Google Maps</td>
+            <td class="smallurl">http://maps.google.co.uk?q=</td>
+            <td>Simply the best mapping tool ever</td>
+          </tr>
+          <tr>
+            <td>Just Open</td>
+            <td class="smallurl"></td>
+            <td>Just leave the URL blank for this</td>
+          </tr>
+          <tr>
+            <td>Dictionary</td>
+            <td class="smallurl">http://dictionary.reference.com/search?q=</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>eBay Negs</td>
+            <td class="smallurl">http://toolhaus.org/cgi-bin/negs?Dirn=Received+by&amp;User=</td>
+            <td>Saves adding another extension</td>
+          </tr>
+          <tr>
+            <td>Multimap</td>
+            <td class="smallurl">http://multimap.com/map/places.cgi?client=public&amp;lang=&amp;advanced=&amp;quicksearch=</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Streetmap</td>
+            <td class="smallurl">http://streetmap.co.uk/newsearch.srf?name=</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Google UK</td>
+            <td class="smallurl">http://www.google.co.uk/search?q=</td>
+            <td>Because sometimes google.com redirects to .co.fr, what's all that about?</td>
+          </tr>
+          <tr>
+            <td>Yellow Pages</td>
+            <td class="smallurl">http://www.yell.com/ucs/UcsSearchAction.do?searchType=classic&amp;location=SOMEPLACE&amp;keywords=</td>
+            <td>You'll have to replace SOMEPLACE with your own postcode/town</td>
+          </tr>
+          <tr>
+            <td>Scoot</td>
+            <td class="smallurl">http://www.scoot.co.uk/search.php?towncounty=SOMEPLACE&amp;ikwd=</td>
+            <td>You'll have to replace SOMEPLACE with your own postcode/town</td>
+          </tr>
+          <tr>
+            <td>Thomson Local</td>
+            <td class="smallurl">http://www.thomsonlocal.com/BusinessFinder.aspx?where=SOMEPLACE&amp;what=</td>
+            <td>You'll have to replace SOMEPLACE with your own postcode/town</td>
+          </tr>
+          <tr>
+            <td>Wikipedia</td>
+            <td class="smallurl">http://en.wikipedia.org/wiki/Special:Search?search=</td>
+            <td></td>
+          </tr>
+        </table>
+        <p>See below for how to make your own!</p>
+      </div>
+      <h1>Hints and tips</h1>
+      <div class="layout">
+        <p>Probably the hardest aspect of <span class="aub">Advanced URL Builder</span> is getting the URL's that you want to open.</p>
+        <p>If you're technically savvy then this isn't too much effort, but for a lot of net users the 'how' is a bit harder.</p>
+      </div>
+      <div class="layout">
+        <h2>URL Scraping</h2>
+        <p>
+          The easiest way of finding the URL to use is by simply looking at the URL after you have submitted a search from a website.<br/>
+          For example, if you type 'test' into Google (.co.uk) you get a page with this as its URL: <span class="monospaced">http://www.google.co.uk/search?hl=en&amp;q=<span class="monoHighlight">test</span>&amp;btnG=Search&amp;meta=</span>
+        </p>
+        <p>As you can see, my search criteria, 'test', has been included in the URL, which is great as this is the biggest clue that you can use this method.</p>
+        <p>So now you can start building your URL. Firstly you will need everything before the '<span class="monospaced">?</span>', this is the actual URL.</p>
+        <p>Taking this give us: <span class="monospaced">http://www.google.co.uk/search?</span>, but we know that we also need our search criteria. To find that we need to understand the rest of the URL.
+        </p>
+        <p>
+          Everything after the '<span class="monospaced">?</span>' are parameters which take the form of 'key = value' pairs. In this example we have four of these pairs, each pair is delimited by the character '<span class="monospaced">&amp;</span>'.<br/>
+          The four pairs are:
+        </p>
+        <table border="1">
+          <tr>
+            <th>key</th>
+            <td class="monospaced">h1</td>
+            <td class="monospaced">q</td>
+            <td class="monospaced">btnG</td>
+            <td class="monospaced">meta</td>
+          </tr>
+          <tr>
+            <th>value</th>
+            <td class="monospaced">en</td>
+            <td class="monospaced">test</td>
+            <td class="monospaced">Search</td>
+            <td>&lt;nothing&gt;</td>
+          </tr>
+        </table>
+        <p>We know that we searched for 'test' so we need the appropriate key for this (as well as the '=' sign), which is '<span class="monospaced">q=</span>'.</p>
+        <p>Putting it all together forms our first attempt at the URL: <span class="monospaced">http://www.google.co.uk/search?q=</span>. In your browser, you copy that in and put anything you like on the end to see if it works.</p>
+        <p>In the case of Google, this is actually all we need, but some of the other parameters might be important depending on what you need to do, experiment by adding them in and see the results (remember to add a '<span class="monospaced">&amp;</span>' to separate the pairs).</p>
+        <p>The last thing to remember is that <span class="aub">Advanced URL Builder</span> will append to the text you highlight <b>to the end</b>, so you will need to ensure that the URL ends with the appropriate parameter.</p>
+      </div>
+      <div class="layout">
+        <h2>Viewing source</h2>
+        <p>If the above method doesn't work, you only really have one choice, to look at the code.</p>
+        <p>To do this:</p>
+        <ul>
+          <li>go to the page you are interested in</li>
+          <li>highlight the area around the text box where you type your search criteria into</li>
+          <li>right click</li>
+          <li>select the option 'View Selection Source'</li>
+        </ul>
+        <p>A window will open with a bunch of code in it and a portion selected.</p>
+        <p>This can be a bit daunting, but bear with it, you are looking for a bit of code that looks like <span class="monospaced">&lt;input ... type="text" ... &gt;</span>, where the ... can be other attributes. The important part is the <span class="monospaced">type="text"</span>, this means it's a text box (Note: 'text' is the default, so the 'type' might be missing altogether).</p>
+        <p>Now you have found the text box you usually type stuff into, you need its name. Look for an attribute like <span class="monospaced">name="somename"</span>, you now know that the name is 'somename'.</p>
+        <p>You now have to look for the form that surrounds the text box, hopefully it's not buried too far away. Look for the first <span class="monospaced">&lt;form ... &gt;</span> before the textbox (Note: you might have to select more of the web page to find this, or else you might have to view all the source!)</p>
+        <p>Once located, it will have an attribute like <span class="monospaced">action="someaction"</span>. This action is the URL that you will need, sometimes it is a complete URL (i.e. starts with http://), but more often it is part of a URL that the browser appends to the host name when it is submitted.</p>
+        <p>
+          If we take Google (.co.uk) as an example, you will see that the textbox that you type into is <span class="monospaced">&lt;input maxlength="2048" size="55" name="q" value="" title="Google Search"&gt;</span>, so the name we are interested in is 'q'.<br/>
+          The form that surrounds the text box is <span class="monospaced">&lt;form action="/search" name="f"&gt;</span>, so the action we are interested in is '/search'.
+        </p>
+        <p>
+          Putting it all together, we take the host (http://www.google.co.uk), add the action, add a '<span class="monospaced">?</span>' to separate the parameters, add the name of the text box, and finally add a '<span class="monospaced">=</span>'.<br/>
+          Making: <span class="monospaced">http://www.google.co.uk/search?q=</span>
+        </p>
+      </div>
+      <!-- End of content -->
+      <div class="verticalalign">&nbsp;</div>
+    </div>
+    <div id="block_2" style="background-image: url(firefoxleft.png); ">
+      <div class="verticalalign">&nbsp;</div>
+    </div>
+    <div id="block_3" style="background-image: url(firefoxright.png); ">
+      <div class="verticalalign">&nbsp;</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
