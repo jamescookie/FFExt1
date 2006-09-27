@@ -21,10 +21,17 @@ var @EXTENSION@Var = {
                 }
 
                 var count = prefs.getIntPref("@EXTENSION@.iterator");
+                var tempCommand;
+                try {
+                    getBrowserSelection();
+                    tempCommand = "getBrowserSelection()"  // firefox 2+
+                } catch(e) {
+                    tempCommand = "gContextMenu.searchSelected()"
+                }
                 for (var i = 1; i <= count; i++) {
                     var tempItem = document.createElement("menuitem");
                     @EXTENSION@Var.addMenuLabel(tempItem, i, prefs);
-                    tempItem.setAttribute("oncommand", "@EXTENSION@Var.@EXTENSION@(gContextMenu.searchSelected(), '"+i+"');");
+                    tempItem.setAttribute("oncommand", "@EXTENSION@Var.@EXTENSION@(" + tempCommand + ", '"+i+"');");
                     popupmenu.appendChild(tempItem);
                 }
 			}
