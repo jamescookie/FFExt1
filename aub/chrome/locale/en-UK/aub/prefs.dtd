@@ -2,6 +2,12 @@
 <!ENTITY @EXTENSION@.prefs.title "@EXTENSION_FULL@ Options">
 <!ENTITY @EXTENSION@.prefs.intro "Enter the URLs to use here">
 
-<!ENTITY @EXTENSION@.prefs.iteratorLabel "Number of menu items (Note: if you change this, close and reopen this dialog)">
+<!ENTITY @EXTENSION@.prefs.addButton "Add">
+<!ENTITY @EXTENSION@.prefs.updateButton "Update">
+<!ENTITY @EXTENSION@.prefs.deleteButton "Delete">
+<!ENTITY @EXTENSION@.prefs.clearButton "Clear">
+
+<!ENTITY @EXTENSION@.prefs.updateError "Something must be selected to update it.">
+
 <!ENTITY @EXTENSION@.prefs.nameLabel "Name">
 <!ENTITY @EXTENSION@.prefs.urlLabel "URL">

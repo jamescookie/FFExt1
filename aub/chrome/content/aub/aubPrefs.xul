@@ -15,25 +15,29 @@
 
 	<separator class="thin"/>
 
-    <label value="&@EXTENSION@.prefs.iteratorLabel;"/>
-    <textbox id="iterator" style="width:20px" maxlength="2"/>
+    <label value="&@EXTENSION@.prefs.nameLabel;"/>
+    <textbox id="inputName" style="width:20px"/>
+    <label value="&@EXTENSION@.prefs.urlLabel;"/>
+    <textbox id="inputUrl" style="width:20px"/>
+
+    <hbox flex="1">
+      <button label="&@EXTENSION@.prefs.addButton;" style="min-width: 100px;" flex="1" onclick="addItem();"/>
+      <spacer flex="1"/>
+      <button label="&@EXTENSION@.prefs.updateButton;" style="min-width: 100px;" flex="1" onclick="updateItem('&@EXTENSION@.prefs.updateError;');"/>
+      <spacer flex="1"/>
+      <button label="&@EXTENSION@.prefs.deleteButton;" style="min-width: 100px;" flex="1" onclick="deleteItem();"/>
+      <spacer flex="1"/>
+      <button label="&@EXTENSION@.prefs.clearButton;" style="min-width: 100px;" flex="1" onclick="clearAll();"/>
+    </hbox>
 
     <separator class="thin"/>
 
-	<grid flex="1">
-		<rows id="rows">
-			<row/>
-		</rows>
-		<columns>
-			<column id="numberColumn">
-				<label value=""/>
-			</column>
-			<column id="nameColumn">
-				<label value="&@EXTENSION@.prefs.nameLabel;"/>
-			</column>
-			<column id="urlColumn" flex="1" style="min-width: 400px;">
-				<label value="&@EXTENSION@.prefs.urlLabel;"/>
-			</column>
-		</columns>
-	</grid>
+    <tree id="treeThing" height="200" flex="1" hidecolumnpicker="true" seltype="single" onselect="itemSelected();">
+        <treecols>
+            <treecol id="nameColumn" label="&@EXTENSION@.prefs.nameLabel;" flex="1"/>
+            <treecol id="urlColumn" label="&@EXTENSION@.prefs.urlLabel;" flex="2"/>
+        </treecols>
+        <treechildren id="rows"/>
+    </tree>
+
 </dialog>

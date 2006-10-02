@@ -1,35 +1,64 @@
 function init() {
 	var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
     var count = getIntegerPreferenceValue("iterator", prefs, 3);
-
-    document.getElementById("iterator").value = count;
-
-    var tempItem;
-    var fieldName;
     var rowParent = document.getElementById("rows");
-    var numberColumnParent = document.getElementById("numberColumn");
-    var nameColumnParent = document.getElementById("nameColumn");
-    var urlColumnParent = document.getElementById("urlColumn");
 
     for (var i = 1; i <= count; i++) {
-        rowParent.appendChild(document.createElement("row"));
-
-        tempItem = document.createElement("label");
-        tempItem.setAttribute("value", i);
-        numberColumnParent.appendChild(tempItem);
-
-        tempItem = document.createElement("textbox");
-        fieldName = "name"+i;
-        tempItem.setAttribute("id", fieldName);
-        tempItem.setAttribute("value", getCharacterPreferenceValue(fieldName, prefs));
-        nameColumnParent.appendChild(tempItem);
-
-        tempItem = document.createElement("textbox");
-        fieldName = "url"+i;
-        tempItem.setAttribute("id", fieldName);
-        tempItem.setAttribute("value", getCharacterPreferenceValue(fieldName, prefs));
-        urlColumnParent.appendChild(tempItem);
+        addTreeItem(rowParent, getCharacterPreferenceValue("name"+i, prefs), getCharacterPreferenceValue("url"+i, prefs));
     }
+}
+
+function addTreeItem(parent, name, url) {
+    var tempItem;
+    var tempRow;
+
+    tempItem = document.createElement("treeitem");
+    parent.appendChild(tempItem);
+    tempRow = document.createElement("treerow");
+    tempItem.appendChild(tempRow);
+
+    tempItem = document.createElement("treecell");
+    tempItem.setAttribute("label", name);
+    tempRow.appendChild(tempItem);
+
+    tempItem = document.createElement("treecell");
+    tempItem.setAttribute("label", url);
+    tempRow.appendChild(tempItem);
+}
+
+function itemSelected() {
+    var tree = getTree();
+    document.getElementById("inputName").value = tree.view.getCellText(tree.currentIndex, tree.columns["nameColumn"]);
+    document.getElementById("inputUrl").value = tree.view.getCellText(tree.currentIndex, tree.columns["urlColumn"]);
+}
+
+function addItem() {
+    addTreeItem(document.getElementById("rows"), trim(document.getElementById("inputName").value), trim(document.getElementById("inputUrl").value));
+}
+
+function deleteItem() {
+    var tree = getTree();
+    var item = tree.view.getItemAtIndex(tree.currentIndex);
+    item.parentNode.removeChild(item);
+}
+
+function updateItem(message) {
+    var tree = getTree();
+    var index = tree.currentIndex;
+    if (index == -1) {
+        alert(message);
+    } else {
+        tree.view.setCellText(tree.currentIndex, tree.columns["nameColumn"], document.getElementById("inputName").value);
+        tree.view.setCellText(tree.currentIndex, tree.columns["urlColumn"], document.getElementById("inputUrl").value);
+    }
+}
+
+function clearAll() {
+    var tree = getTree();
+    // todo find out why I can't set this to "", then I wouldn't need the trim function.
+    document.getElementById("inputName").value = " ";
+    document.getElementById("inputUrl").value = " ";
+    tree.view.selection.select(-1);
 }
 
 function getCharacterPreferenceValue(fieldName, prefs) {
@@ -58,20 +87,30 @@ function getIntegerPreferenceValue(fieldName, prefs, defaultValue) {
 
 function accept() {
 	var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
-    var count = getIntegerPreferenceValue("iterator", prefs, 3);
-    var newIterator = document.getElementById("iterator").value;
+    var tree = getTree();
+    var count = tree.view.rowCount;
+    var j;
 
-    if ((newIterator / newIterator) == 1) {
-        prefs.setIntPref("@EXTENSION@.iterator", newIterator);
-    }
-    for (var i = 1; i <= count; i++) {
-        saveField("name"+i, prefs);
-        saveField("url"+i, prefs);
+    if (count > 0) {
+        prefs.setIntPref("@EXTENSION@.iterator", count);
+
+        for (var i = 0; i < count; i++) {
+            j = i + 1;
+            saveField("name"+j, tree.view.getCellText(i, tree.columns["nameColumn"]), prefs);
+            saveField("url"+j, tree.view.getCellText(i, tree.columns["urlColumn"]), prefs);
+        }
     }
 }
 
-function saveField(fieldName, prefs) {
-	var tmp = document.getElementById(fieldName).value;
-	prefs.setCharPref("@EXTENSION@."+fieldName, tmp);
+function saveField(fieldName, newValue, prefs) {
+	prefs.setCharPref("@EXTENSION@."+fieldName, newValue);
+}
+
+function trim(str) {
+   return str.replace(/^\s*|\s*$/g, "");
+}
+
+function getTree() {
+    return document.getElementById("treeThing");
 }
 
