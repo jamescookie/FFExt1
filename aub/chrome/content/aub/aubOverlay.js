@@ -17,7 +17,8 @@ var @EXTENSION@Var = {
 		if (menuitem) {
             var selectedText = @EXTENSION@Var.getSelectedText();
             menuitem.hidden = (selectedText == "");
-            if (!menuitem.hidden) {
+            if (!menuitem.hidden && menuitem.getAttribute("flags") != "built") {
+                menuitem.setAttribute("flags", "built");
                 var popupmenu = document.getElementById("@EXTENSION@-popup");
                 var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
 
@@ -26,13 +27,42 @@ var @EXTENSION@Var = {
                     popupmenu.removeChild(popupmenu.childNodes.item(i));
                 }
 
-                var count = prefs.getIntPref("@EXTENSION@.iterator");
+                var count = @EXTENSION@Var.getIntegerPreferenceValue("iterator", prefs, 0);
                 var tempItem;
+                var children;
+                var isParent;
+                var parentStack = new Array();
+                var countStack = new Array();
+                var childCounter = count;
+                var stackPointer = 0;
+
                 for (var i = 1; i <= count; i++) {
-                    tempItem = document.createElement("menuitem");
-                    @EXTENSION@Var.addMenuLabel(tempItem, i, prefs);
-                    tempItem.setAttribute("oncommand", "@EXTENSION@Var.@EXTENSION@('"+i+"');");
-                    popupmenu.appendChild(tempItem);
+                    children = @EXTENSION@Var.getIntegerPreferenceValue("children"+i, prefs, 0);
+                    isParent = (children > 0);
+                    childCounter--;
+                    if (isParent) {
+                        parentStack[stackPointer] = popupmenu;
+                        countStack[stackPointer] = childCounter;
+                        childCounter = children;
+                        stackPointer++;
+
+                        tempItem = document.createElement("menu");
+                        @EXTENSION@Var.addMenuLabel(tempItem, i, prefs);
+                        popupmenu.appendChild(tempItem);
+                        popupmenu = document.createElement("menupopup");
+                        tempItem.appendChild(popupmenu);
+                    } else {
+                        tempItem = document.createElement("menuitem");
+                        @EXTENSION@Var.addMenuLabel(tempItem, i, prefs);
+                        tempItem.setAttribute("oncommand", "@EXTENSION@Var.@EXTENSION@('"+i+"');");
+                        popupmenu.appendChild(tempItem);
+                    }
+
+                    while (childCounter == 0 && stackPointer > 0) {
+                        stackPointer--;
+                        popupmenu = parentStack[stackPointer];
+                        childCounter = countStack[stackPointer];
+                    }
                 }
 
                 popupmenu.appendChild(document.createElement("menuseparator"));
@@ -66,29 +96,71 @@ var @EXTENSION@Var = {
     },
 
     addMenuLabel: function(menuitem, num, prefs) {
-		var label = "";
-		if (prefs.getPrefType("@EXTENSION@.name"+num) == prefs.PREF_STRING) {
-			label = prefs.getCharPref("@EXTENSION@.name"+num);
+        var labelStr = @EXTENSION@Var.getCharacterPreferenceValue("name"+num, prefs, "");
+		if (labelStr == "") {
+			labelStr = "Unknown";
 		}
-		if (label == "") {
-			label = "Unknown";
-		}
-		menuitem.setAttribute("label", label);
+		menuitem.setAttribute("label", labelStr);
 	},
+
+    getIntegerPreferenceValue: function(fieldName, prefs, defaultValue) {
+        var tmp;
+
+        if (prefs.getPrefType("@EXTENSION@."+fieldName) == prefs.PREF_INT){
+            tmp = prefs.getIntPref("@EXTENSION@."+fieldName);
+        } else {
+            tmp = defaultValue;
+        }
+
+        return tmp;
+    },
+
+    getCharacterPreferenceValue: function(fieldName, prefs, defaultValue) {
+        var tmp;
+
+        if (prefs.getPrefType("@EXTENSION@."+fieldName) == prefs.PREF_STRING){
+            tmp = prefs.getCharPref("@EXTENSION@."+fieldName);
+        } else {
+            tmp = defaultValue;
+        }
+
+        return tmp;
+    },
 
 	@EXTENSION@: function(urlToUse) {
         var thing = @EXTENSION@Var.getSelectedText();
         var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+        var OPEN_IN_TAB            = 0;
+        var OPEN_IN_BACKGROUND_TAB = 1;
+        var OPEN_IN_WINDOW         = 2;
+        var OPEN_IN_CURRENT        = 3;
 
-		var url;
-		if (prefs.getPrefType("@EXTENSION@.url"+urlToUse) == prefs.PREF_STRING){
-			url = prefs.getCharPref("@EXTENSION@.url"+urlToUse);
-		} else {
-			url = "http://www.google.com/search?q=";
-		}
+		var url = @EXTENSION@Var.getCharacterPreferenceValue("url"+urlToUse, prefs, "http://www.google.com/search?q=");
+		var variable = @EXTENSION@Var.getCharacterPreferenceValue("variable", prefs, "");
+        var urlToOpen;
 
-		var newTab = getBrowser().addTab(url + thing);
-		if (!gPrefService.getBoolPref('browser.tabs.loadInBackground')) getBrowser().selectedTab = newTab;
+        if (variable == "") {
+            urlToOpen = url + thing;
+        } else {
+            var index = url.indexOf(variable);
+            if (index == -1) {
+                urlToOpen = url + thing;
+            } else {
+                urlToOpen = url.substring(0, index) + thing + url.substring(index + variable.length);
+            }
+        }
+
+        var openPref = @EXTENSION@Var.getIntegerPreferenceValue("open", prefs, 1);
+        if (openPref == OPEN_IN_WINDOW) {
+            window.openDialog(getBrowserURL(), '_blank', 'chrome,all,dialog=no', urlToOpen);
+        } else if (openPref == OPEN_IN_CURRENT) {
+            getBrowser().loadURI(urlToOpen);
+        } else {
+            var newTab = getBrowser().addTab(urlToOpen);
+            if (openPref == OPEN_IN_TAB) {
+                getBrowser().selectedTab = newTab;
+            }
+        }
 	}
 }
 

@@ -11,33 +11,66 @@
 
 	<script type="application/x-javascript" src="chrome://@EXTENSION@/content/@EXTENSION@Prefs.js"/>
 
-	<label class="header" value="&@EXTENSION@.prefs.intro;" />
+    <tabbox flex="1">
+        <tabs>
+            <tab label="&@EXTENSION@.prefs.tab1;"/>
+            <tab label="&@EXTENSION@.prefs.tab2;"/>
+        </tabs>
+        <tabpanels flex="1">
+            <tabpanel orient="vertical">
+                <label class="header" value="&@EXTENSION@.prefs.intro;" />
+                <label value="&@EXTENSION@.prefs.notes;" />
 
-	<separator class="thin"/>
+                <separator class="thin"/>
 
-    <label value="&@EXTENSION@.prefs.nameLabel;"/>
-    <textbox id="inputName" style="width:20px"/>
-    <label value="&@EXTENSION@.prefs.urlLabel;"/>
-    <textbox id="inputUrl" style="width:20px"/>
+                <label value="&@EXTENSION@.prefs.nameLabel;"/>
+                <textbox id="inputName" style="width:20px"/>
+                <label value="&@EXTENSION@.prefs.urlLabel;"/>
+                <textbox id="inputUrl" style="width:20px"/>
 
-    <hbox flex="1">
-      <button label="&@EXTENSION@.prefs.addButton;" style="min-width: 100px;" flex="1" onclick="addItem();"/>
-      <spacer flex="1"/>
-      <button label="&@EXTENSION@.prefs.updateButton;" style="min-width: 100px;" flex="1" onclick="updateItem('&@EXTENSION@.prefs.updateError;');"/>
-      <spacer flex="1"/>
-      <button label="&@EXTENSION@.prefs.deleteButton;" style="min-width: 100px;" flex="1" onclick="deleteItem();"/>
-      <spacer flex="1"/>
-      <button label="&@EXTENSION@.prefs.clearButton;" style="min-width: 100px;" flex="1" onclick="clearAll();"/>
-    </hbox>
+                <hbox>
+                    <button label="&@EXTENSION@.prefs.addButton;" style="min-width: 100px;" onclick="addItem();"/>
+                    <spacer flex="1"/>
+                    <button label="&@EXTENSION@.prefs.addFolderButton;" style="min-width: 100px;" onclick="addFolder();"/>
+                    <spacer flex="1"/>
+                    <button label="&@EXTENSION@.prefs.updateButton;" style="min-width: 100px;" onclick="updateItem('&@EXTENSION@.prefs.updateError;');"/>
+                    <spacer flex="1"/>
+                    <button label="&@EXTENSION@.prefs.deleteButton;" style="min-width: 100px;" onclick="deleteItem('&@EXTENSION@.prefs.deleteConfirm;');"/>
+                    <spacer flex="1"/>
+                    <button label="&@EXTENSION@.prefs.clearButton;" style="min-width: 100px;" onclick="clearAll();"/>
+                </hbox>
 
-    <separator class="thin"/>
+                <separator class="thin"/>
 
-    <tree id="treeThing" height="200" flex="1" hidecolumnpicker="true" seltype="single" onselect="itemSelected();">
-        <treecols>
-            <treecol id="nameColumn" label="&@EXTENSION@.prefs.nameLabel;" flex="1"/>
-            <treecol id="urlColumn" label="&@EXTENSION@.prefs.urlLabel;" flex="2"/>
-        </treecols>
-        <treechildren id="rows"/>
-    </tree>
+                <tree id="treeThing" height="200" flex="1" hidecolumnpicker="true" seltype="single" onselect="itemSelected();">
+                    <treecols>
+                        <treecol id="nameColumn" label="&@EXTENSION@.prefs.nameLabel;" flex="1" primary="true"/>
+                        <treecol id="urlColumn" label="&@EXTENSION@.prefs.urlLabel;" flex="2"/>
+                    </treecols>
+                    <treechildren id="rows"/>
+                </tree>
+
+            </tabpanel>
+            <tabpanel orient="vertical">
+                <groupbox orient="vertical">
+                    <caption label="&@EXTENSION@.prefs.openLabel;"/>
+
+                    <radiogroup id="openPref">
+                        <radio label="&@EXTENSION@.prefs.openOpt0;"/>
+                        <radio label="&@EXTENSION@.prefs.openOpt1;"/>
+                        <radio label="&@EXTENSION@.prefs.openOpt2;"/>
+                        <radio label="&@EXTENSION@.prefs.openOpt3;"/>
+                    </radiogroup>
+                </groupbox>
+                <groupbox orient="vertical">
+                    <caption label="&@EXTENSION@.prefs.variable;"/>
+                    <label value="&@EXTENSION@.prefs.variableNote1;"/>
+                    <label value="&@EXTENSION@.prefs.variableNote2;"/>
+                    <label value="&@EXTENSION@.prefs.variableNote3;"/>
+                    <textbox id="variable" style="width:20px"/>
+                </groupbox>
+            </tabpanel>
+        </tabpanels>
+    </tabbox>
 
 </dialog>

@@ -4,7 +4,7 @@
     <property name="extension.name" value="aub" />
     <property name="extension.full.name" value="Advanced URL Builder" />
     <property name="extension.author" value="James Cook" />
-    <property name="extension.version" value="1.2" />
+    <property name="extension.version" value="1.3" />
     <property name="base.url" value="http://www.jamescookie.com" />
     <property name="extensions.url" value="${base.url}/extensions/" />
     <property name="extension.description" value="Append selected text to the URL of your favourite site." />

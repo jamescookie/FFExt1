@@ -109,7 +109,6 @@
           <option name="m_minLength" value="5" />
           <option name="m_maxLength" value="32" />
         </inspection_tool>
-        <inspection_tool class="OverridableMethodCallInConstructor" level="WARNING" enabled="false" />
         <inspection_tool class="ComparisonOfShortAndChar" level="WARNING" enabled="false" />
         <inspection_tool class="TrivialIf" level="WARNING" enabled="false" />
         <inspection_tool class="ClassEscapesItsScope" level="WARNING" enabled="false" />
