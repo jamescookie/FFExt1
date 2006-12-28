@@ -228,7 +228,9 @@
           <option name="m_ignoreClassObjects" value="false" />
           <option name="m_ignorePrivateConstructors" value="false" />
         </inspection_tool>
-        <inspection_tool class="ExceptionFromCatchWhichDoesntWrap" level="WARNING" enabled="false" />
+        <inspection_tool class="ExceptionFromCatchWhichDoesntWrap" level="WARNING" enabled="false">
+          <option name="ignoreGetMessage" value="false" />
+        </inspection_tool>
         <inspection_tool class="JavaLangImport" level="WARNING" enabled="false" />
         <inspection_tool class="MethodNameSameAsParentName" level="WARNING" enabled="false" />
         <inspection_tool class="JavaLangReflect" level="WARNING" enabled="false" />
@@ -529,7 +531,9 @@
         </inspection_tool>
         <inspection_tool class="MultipleTopLevelClassesInFile" level="WARNING" enabled="false" />
         <inspection_tool class="UnnecessaryReturn" level="WARNING" enabled="false" />
-        <inspection_tool class="HardcodedFileSeparators" level="WARNING" enabled="false" />
+        <inspection_tool class="HardcodedFileSeparators" level="WARNING" enabled="false">
+          <option name="m_recognizeExampleMediaType" value="false" />
+        </inspection_tool>
         <inspection_tool class="EnumClass" level="WARNING" enabled="false" />
         <inspection_tool class="PublicField" level="WARNING" enabled="false" />
         <inspection_tool class="FinalStaticMethod" level="WARNING" enabled="false" />
