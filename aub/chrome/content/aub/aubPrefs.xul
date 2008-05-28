@@ -23,26 +23,21 @@
 
                 <separator class="thin"/>
 
-                <label value="&@EXTENSION@.prefs.nameLabel;"/>
-                <textbox id="inputName" style="width:20px"/>
-                <label value="&@EXTENSION@.prefs.urlLabel;"/>
-                <textbox id="inputUrl" style="width:20px"/>
-
                 <hbox>
                     <button label="&@EXTENSION@.prefs.addButton;" style="min-width: 100px;" onclick="addItem();"/>
                     <spacer flex="1"/>
                     <button label="&@EXTENSION@.prefs.addFolderButton;" style="min-width: 100px;" onclick="addFolder();"/>
                     <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.updateButton;" style="min-width: 100px;" onclick="updateItem('&@EXTENSION@.prefs.updateError;');"/>
-                    <spacer flex="1"/>
                     <button label="&@EXTENSION@.prefs.deleteButton;" style="min-width: 100px;" onclick="deleteItem('&@EXTENSION@.prefs.deleteConfirm;');"/>
                     <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.clearButton;" style="min-width: 100px;" onclick="clearAll();"/>
+                    <button label="&@EXTENSION@.prefs.moveUpButton;" style="min-width: 100px;" onclick="moveItem('up', '&@EXTENSION@.prefs.moveError;');"/>
+                    <spacer flex="1"/>
+                    <button label="&@EXTENSION@.prefs.moveDownButton;" style="min-width: 100px;" onclick="moveItem('down', '&@EXTENSION@.prefs.moveError;');"/>
                 </hbox>
 
                 <separator class="thin"/>
 
-                <tree id="treeThing" height="200" flex="1" hidecolumnpicker="true" seltype="single" onselect="itemSelected();">
+                <tree id="treeThing" height="200" flex="1" hidecolumnpicker="true" seltype="single" editable="true">
                     <treecols>
                         <treecol id="nameColumn" label="&@EXTENSION@.prefs.nameLabel;" flex="1" primary="true"/>
                         <treecol id="urlColumn" label="&@EXTENSION@.prefs.urlLabel;" flex="2"/>

@@ -62,21 +62,12 @@ function addTreeItem(parent, name, url, folder) {
     return newParent;
 }
 
-function itemSelected() {
-    var tree = getTree();
-    var index = tree.currentIndex;
-    if (index != -1) { // this can happen when an item is deleted
-        document.getElementById("inputName").value = tree.view.getCellText(index, tree.columns["nameColumn"]);
-        document.getElementById("inputUrl").value = tree.view.getCellText(index, tree.columns["urlColumn"]);
-    }
-}
-
 function addItem() {
-    addTreeItem(findParent(), trim(document.getElementById("inputName").value), trim(document.getElementById("inputUrl").value), false);
+    addTreeItem(findParent(), "New Item", "http://"+document.getElementById("variable").value, false);
 }
 
 function addFolder() {
-    addTreeItem(findParent(), trim(document.getElementById("inputName").value), "", true);
+    addTreeItem(findParent(), "New Folder", "", true);
 }
 
 function findParent() {
@@ -105,31 +96,31 @@ function deleteItem(folderSelectedMessage) {
     }
 }
 
-function updateItem(nothingSelectedMessage) {
+function moveItem(direction, nothingSelectedMessage) {
     var tree = getTree();
     var index = tree.currentIndex;
     if (index == -1) {
         alert(nothingSelectedMessage);
     } else {
-        tree.view.setCellText(index, tree.columns["nameColumn"], document.getElementById("inputName").value);
-        if (!tree.view.isContainer(index)) {
-            tree.view.setCellText(index, tree.columns["urlColumn"], document.getElementById("inputUrl").value);
+        var item = tree.view.getItemAtIndex(index);
+        if (direction == "up") {
+            if (item.previousSibling) {
+                item.parentNode.insertBefore(item, item.previousSibling)
+                tree.view.selection.select(index - 1)
+            }
+        } else {
+            if (item.nextSibling) {
+                item.parentNode.insertBefore(item.nextSibling, item)
+                tree.view.selection.select(index + 1)
+            }
         }
     }
-}
-
-function clearAll() {
-    var tree = getTree();
-    // todo find out why I can't set this to "", then I wouldn't need the trim function.
-    document.getElementById("inputName").value = " ";
-    document.getElementById("inputUrl").value = " ";
-    tree.view.selection.select(-1);
 }
 
 function getCharacterPreferenceValue(fieldName, prefs, defaultValue) {
 	var tmp;
 
-	if (prefs.getPrefType("@EXTENSION@."+fieldName) == prefs.PREF_STRING){
+	if (prefs.getPrefType("@EXTENSION@."+fieldName) == prefs.PREF_STRING) {
 		tmp = prefs.getCharPref("@EXTENSION@."+fieldName);
 	} else {
 		tmp = defaultValue;
@@ -141,7 +132,7 @@ function getCharacterPreferenceValue(fieldName, prefs, defaultValue) {
 function getIntegerPreferenceValue(fieldName, prefs, defaultValue) {
 	var tmp;
 
-	if (prefs.getPrefType("@EXTENSION@."+fieldName) == prefs.PREF_INT){
+	if (prefs.getPrefType("@EXTENSION@."+fieldName) == prefs.PREF_INT) {
 		tmp = prefs.getIntPref("@EXTENSION@."+fieldName);
 	} else {
 		tmp = defaultValue;
@@ -188,10 +179,6 @@ function saveField(fieldName, newValue, prefs) {
 
 function saveIntField(fieldName, newValue, prefs) {
 	prefs.setIntPref("@EXTENSION@."+fieldName, newValue);
-}
-
-function trim(str) {
-   return str.replace(/^\s*|\s*$/g, "");
 }
 
 function getTree() {

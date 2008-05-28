@@ -7,15 +7,15 @@
 
 <!--tab 1-->
 <!ENTITY @EXTENSION@.prefs.intro "Enter the URLs to use here">
-<!ENTITY @EXTENSION@.prefs.notes "Note: To add to a folder, select the folder first.">
+<!ENTITY @EXTENSION@.prefs.notes "To edit an item - double click it">
 
 <!ENTITY @EXTENSION@.prefs.addButton "Add">
 <!ENTITY @EXTENSION@.prefs.addFolderButton "Add Folder">
-<!ENTITY @EXTENSION@.prefs.updateButton "Update">
 <!ENTITY @EXTENSION@.prefs.deleteButton "Delete">
-<!ENTITY @EXTENSION@.prefs.clearButton "Clear">
+<!ENTITY @EXTENSION@.prefs.moveUpButton "Move Up">
+<!ENTITY @EXTENSION@.prefs.moveDownButton "Move Down">
 
-<!ENTITY @EXTENSION@.prefs.updateError "Something must be selected to update it.">
+<!ENTITY @EXTENSION@.prefs.moveError "Something must be selected to move it.">
 <!ENTITY @EXTENSION@.prefs.deleteConfirm "Are you sure you want to delete this folder and all its contents?">
 
 <!ENTITY @EXTENSION@.prefs.nameLabel "Name">
