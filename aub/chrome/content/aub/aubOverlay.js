@@ -67,7 +67,8 @@ var @EXTENSION@Var = {
 
                 popupmenu.appendChild(document.createElement("menuseparator"));
                 tempItem = document.createElement("menuitem");
-                tempItem.setAttribute("label", "Options...");
+                var localeBundle = document.getElementById("@EXTENSION@-bundle");
+                tempItem.setAttribute("label", localeBundle.getString("options")+'...');
                 tempItem.setAttribute("oncommand", "window.openDialog('chrome://@EXTENSION@/content/@EXTENSION@Prefs.xul');");
                 popupmenu.appendChild(tempItem);
             }

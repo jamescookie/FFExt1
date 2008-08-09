@@ -1,16 +1,20 @@
 <?xml version="1.0"?>
+<!DOCTYPE dialog SYSTEM "chrome://@EXTENSION@/locale/@EXTENSION@.dtd">
 
 <overlay id="@EXTENSION@Overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-<script type="application/x-javascript" src="chrome://@EXTENSION@/content/@EXTENSION@Overlay.js">
-</script>
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="@EXTENSION@-bundle" src="chrome://@EXTENSION@/locale/@EXTENSION@.properties"/>
+    </stringbundleset>
 
-<popup id="contentAreaContextMenu">
-  <menu id="context-@EXTENSION@" label="Find using..." accesskey="u" insertafter="context-searchselect">
-    <menupopup id="@EXTENSION@-popup">
-    </menupopup>
-  </menu>
-</popup>
+    <script type="application/x-javascript" src="chrome://@EXTENSION@/content/@EXTENSION@Overlay.js"></script>
+
+    <popup id="contentAreaContextMenu">
+      <menu id="context-@EXTENSION@" label="&@EXTENSION@.context.menu;..." accesskey="&@EXTENSION@.context.accesskey;" insertafter="context-searchselect">
+        <menupopup id="@EXTENSION@-popup">
+        </menupopup>
+      </menu>
+    </popup>
 
 </overlay>

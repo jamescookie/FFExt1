@@ -5,8 +5,8 @@
 <dialog id="@EXTENSION@Prefs"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept, cancel"
-	onload="init();"
-	ondialogaccept="return accept();"
+	onload="@EXTENSION@PrefsVar.init();"
+	ondialogaccept="return @EXTENSION@PrefsVar.accept();"
 	title="&@EXTENSION@.prefs.title;">
 
 	<script type="application/x-javascript" src="chrome://@EXTENSION@/content/@EXTENSION@Prefs.js"/>
@@ -24,15 +24,15 @@
                 <separator class="thin"/>
 
                 <hbox>
-                    <button label="&@EXTENSION@.prefs.addButton;" style="min-width: 100px;" onclick="addItem();"/>
+                    <button label="&@EXTENSION@.prefs.addButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.addItem();"/>
                     <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.addFolderButton;" style="min-width: 100px;" onclick="addFolder();"/>
+                    <button label="&@EXTENSION@.prefs.addFolderButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.addFolder();"/>
                     <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.deleteButton;" style="min-width: 100px;" onclick="deleteItem('&@EXTENSION@.prefs.deleteConfirm;');"/>
+                    <button label="&@EXTENSION@.prefs.deleteButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.deleteItem('&@EXTENSION@.prefs.deleteConfirm;');"/>
                     <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.moveUpButton;" style="min-width: 100px;" onclick="moveItem('up', '&@EXTENSION@.prefs.moveError;');"/>
+                    <button label="&@EXTENSION@.prefs.moveUpButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.moveItem('up', '&@EXTENSION@.prefs.moveError;');"/>
                     <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.moveDownButton;" style="min-width: 100px;" onclick="moveItem('down', '&@EXTENSION@.prefs.moveError;');"/>
+                    <button label="&@EXTENSION@.prefs.moveDownButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.moveItem('down', '&@EXTENSION@.prefs.moveError;');"/>
                 </hbox>
 
                 <separator class="thin"/>

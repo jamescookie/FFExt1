@@ -1,6 +1,8 @@
-function init() {
+var @EXTENSION@PrefsVar = {
+
+init: function() {
 	var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
-    var count = getIntegerPreferenceValue("iterator", prefs, 3);
+    var count = @EXTENSION@PrefsVar.getIntegerPreferenceValue("iterator", prefs, 3);
     var parent = document.getElementById("rows");
     var children;
     var isParent;
@@ -10,13 +12,13 @@ function init() {
     var childCounter = count;
     var stackPointer = 0;
 
-    document.getElementById("openPref").selectedIndex = getIntegerPreferenceValue("open", prefs, 1);
-    document.getElementById("variable").value = getCharacterPreferenceValue("variable", prefs, "");
+    document.getElementById("openPref").selectedIndex = @EXTENSION@PrefsVar.getIntegerPreferenceValue("open", prefs, 1);
+    document.getElementById("variable").value = @EXTENSION@PrefsVar.getCharacterPreferenceValue("variable", prefs, "");
 
     for (var i = 1; i <= count; i++) {
-        children = getIntegerPreferenceValue("children"+i, prefs);
+        children = @EXTENSION@PrefsVar.getIntegerPreferenceValue("children"+i, prefs);
         isParent = (children > 0);
-        newParent = addTreeItem(parent, getCharacterPreferenceValue("name"+i, prefs, "Unknown"), getCharacterPreferenceValue("url"+i, prefs, "Unknown"), isParent);
+        newParent = @EXTENSION@PrefsVar.addTreeItem(parent, @EXTENSION@PrefsVar.getCharacterPreferenceValue("name"+i, prefs, "Unknown"), @EXTENSION@PrefsVar.getCharacterPreferenceValue("url"+i, prefs, "Unknown"), isParent);
         childCounter--;
         if (isParent) {
             parentStack[stackPointer] = parent;
@@ -31,9 +33,9 @@ function init() {
             childCounter = countStack[stackPointer];
         }
     }
-}
+},
 
-function addTreeItem(parent, name, url, folder) {
+addTreeItem: function(parent, name, url, folder) {
     var tempItem;
     var tempRow;
     var newParent;
@@ -60,18 +62,18 @@ function addTreeItem(parent, name, url, folder) {
     tempRow.appendChild(tempItem);
 
     return newParent;
-}
+},
 
-function addItem() {
-    addTreeItem(findParent(), "New Item", "http://"+document.getElementById("variable").value, false);
-}
+addItem: function() {
+    @EXTENSION@PrefsVar.addTreeItem(@EXTENSION@PrefsVar.findParent(), "New Item", "http://"+document.getElementById("variable").value, false);
+},
 
-function addFolder() {
-    addTreeItem(findParent(), "New Folder", "", true);
-}
+addFolder: function() {
+    @EXTENSION@PrefsVar.addTreeItem(@EXTENSION@PrefsVar.findParent(), "New Folder", "", true);
+},
 
-function findParent() {
-    var tree = getTree();
+findParent: function() {
+    var tree = @EXTENSION@PrefsVar.getTree();
     var index = tree.currentIndex;
     var parent = document.getElementById("rows");
     if (index != -1) {
@@ -82,10 +84,10 @@ function findParent() {
         }
     }
     return parent;
-}
+},
 
-function deleteItem(folderSelectedMessage) {
-    var tree = getTree();
+deleteItem: function(folderSelectedMessage) {
+    var tree = @EXTENSION@PrefsVar.getTree();
     var item = tree.view.getItemAtIndex(tree.currentIndex);
     var flag = true;
     if (item.getAttribute("container") == "true") {
@@ -94,10 +96,10 @@ function deleteItem(folderSelectedMessage) {
     if (flag) {
         item.parentNode.removeChild(item);
     }
-}
+},
 
-function moveItem(direction, nothingSelectedMessage) {
-    var tree = getTree();
+moveItem: function(direction, nothingSelectedMessage) {
+    var tree = @EXTENSION@PrefsVar.getTree();
     var index = tree.currentIndex;
     if (index == -1) {
         alert(nothingSelectedMessage);
@@ -115,9 +117,9 @@ function moveItem(direction, nothingSelectedMessage) {
             }
         }
     }
-}
+},
 
-function getCharacterPreferenceValue(fieldName, prefs, defaultValue) {
+getCharacterPreferenceValue: function(fieldName, prefs, defaultValue) {
 	var tmp;
 
 	if (prefs.getPrefType("@EXTENSION@."+fieldName) == prefs.PREF_STRING) {
@@ -127,9 +129,9 @@ function getCharacterPreferenceValue(fieldName, prefs, defaultValue) {
 	}
 
 	return tmp;
-}
+},
 
-function getIntegerPreferenceValue(fieldName, prefs, defaultValue) {
+getIntegerPreferenceValue: function(fieldName, prefs, defaultValue) {
 	var tmp;
 
 	if (prefs.getPrefType("@EXTENSION@."+fieldName) == prefs.PREF_INT) {
@@ -139,11 +141,11 @@ function getIntegerPreferenceValue(fieldName, prefs, defaultValue) {
 	}
 
 	return tmp;
-}
+},
 
-function accept() {
+accept: function() {
 	var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
-    var tree = getTree();
+    var tree = @EXTENSION@PrefsVar.getTree();
     var count = tree.view.rowCount;
     var j;
     var children;
@@ -154,34 +156,34 @@ function accept() {
         menuItem.setAttribute("flags", "");
     }
 
-    saveIntField("open", document.getElementById("openPref").selectedIndex, prefs);
-    saveField("variable", document.getElementById("variable").value, prefs);
+    @EXTENSION@PrefsVar.saveIntField("open", document.getElementById("openPref").selectedIndex, prefs);
+    @EXTENSION@PrefsVar.saveField("variable", document.getElementById("variable").value, prefs);
 
     if (count > 0) {
-        saveIntField("iterator", count, prefs);
+        @EXTENSION@PrefsVar.saveIntField("iterator", count, prefs);
 
         for (var i = 0; i < count; i++) {
             j = i + 1;
             children = 0;
-            saveField("name"+j, tree.view.getCellText(i, tree.columns["nameColumn"]), prefs);
-            saveField("url"+j, tree.view.getCellText(i, tree.columns["urlColumn"]), prefs);
+            @EXTENSION@PrefsVar.saveField("name"+j, tree.view.getCellText(i, tree.columns["nameColumn"]), prefs);
+            @EXTENSION@PrefsVar.saveField("url"+j, tree.view.getCellText(i, tree.columns["urlColumn"]), prefs);
             if (tree.view.isContainer(i)) {
                 children = tree.view.getItemAtIndex(i).firstChild.childNodes.length;
             }
-            saveIntField("children"+j, children, prefs);
+            @EXTENSION@PrefsVar.saveIntField("children"+j, children, prefs);
         }
     }
-}
+},
 
-function saveField(fieldName, newValue, prefs) {
+saveField: function(fieldName, newValue, prefs) {
 	prefs.setCharPref("@EXTENSION@."+fieldName, newValue);
-}
+},
 
-function saveIntField(fieldName, newValue, prefs) {
+saveIntField: function(fieldName, newValue, prefs) {
 	prefs.setIntPref("@EXTENSION@."+fieldName, newValue);
-}
+},
 
-function getTree() {
+getTree: function() {
     return document.getElementById("treeThing");
 }
-
+}

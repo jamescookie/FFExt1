@@ -27,7 +27,7 @@
 			<Description about="urn:mozilla:extension:file:@EXTENSION@.jar">
 				<em:package>content/@EXTENSION@/</em:package>
 				<em:skin>skin/classic/@EXTENSION@/</em:skin>
-				<em:locale>locale/en-UK/@EXTENSION@/</em:locale>
+				<em:locale>locale/en-US/@EXTENSION@/</em:locale>
 			</Description>
 		</em:file>
 
