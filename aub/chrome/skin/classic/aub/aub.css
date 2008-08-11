@@ -1,0 +1,6 @@
+@import url("chrome://global/skin/");
+radio[pane]{list-style-image:url("chrome://aub/skin/aub_pref.png");}
+radio[pane=pane1]{-moz-image-region:rect(0px,32px,32px,0px);}
+radio[pane=pane1]:hover,radio[pane=pane1][selected="true"]{-moz-image-region:rect(32px,32px,64px,0px)}
+radio[pane=pane2]{-moz-image-region:rect(0px,64px,32px,32px);}
+radio[pane=pane2]:hover,radio[pane=pane2][selected="true"]{-moz-image-region:rect(32px,64px,64px,32px)}

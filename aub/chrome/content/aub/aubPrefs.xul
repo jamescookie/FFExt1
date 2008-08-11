@@ -1,71 +1,56 @@
 <?xml version="1.0"?>
-<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://@EXTENSION@/skin/@EXTENSION@.css" type="text/css"?>
 <!DOCTYPE dialog SYSTEM "chrome://@EXTENSION@/locale/prefs.dtd">
 
-<dialog id="@EXTENSION@Prefs"
+<prefwindow id="@EXTENSION@Prefs"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept, cancel"
 	onload="@EXTENSION@PrefsVar.init();"
 	ondialogaccept="return @EXTENSION@PrefsVar.accept();"
 	title="&@EXTENSION@.prefs.title;">
 
+    <prefpane id="pane1" label="&@EXTENSION@.prefs.tab1;">
+		<preferences/>
+		<groupbox>
+			<caption label="&@EXTENSION@.prefs.intro;"/>
+			<hbox pack="center" flex="1">
+				<button label="&@EXTENSION@.prefs.addButton;" onclick="@EXTENSION@PrefsVar.addItem();"/>
+				<button label="&@EXTENSION@.prefs.addFolderButton;" onclick="@EXTENSION@PrefsVar.addFolder();"/>
+				<button label="&@EXTENSION@.prefs.deleteButton;" onclick="@EXTENSION@PrefsVar.deleteItem('&@EXTENSION@.prefs.deleteConfirm;');"/>
+				<button label="&@EXTENSION@.prefs.moveUpButton;" onclick="@EXTENSION@PrefsVar.moveItem('up', '&@EXTENSION@.prefs.moveError;');"/>
+				<button label="&@EXTENSION@.prefs.moveDownButton;" onclick="@EXTENSION@PrefsVar.moveItem('down', '&@EXTENSION@.prefs.moveError;');"/>
+			</hbox>
+			<separator class="thin"/>
+			<tree id="treeThing" height="200" flex="1" hidecolumnpicker="true" seltype="single" editable="true">
+				<treecols>
+					<treecol id="nameColumn" label="&@EXTENSION@.prefs.nameLabel;" flex="1" primary="true" persist="width ordinal hidden"/>
+					<splitter class="tree-splitter"/>
+					<treecol id="urlColumn" label="&@EXTENSION@.prefs.urlLabel;" flex="2" persist="width ordinal hidden"/>
+				</treecols>
+				<treechildren id="rows"/>
+			</tree>
+			<separator class="thin"/>
+			<label value="&@EXTENSION@.prefs.notes;"/>
+		</groupbox>
+	</prefpane>
+	<prefpane id="pane2" label="&@EXTENSION@.prefs.tab2;">
+		<preferences/>
+		<groupbox>
+			<caption label="&@EXTENSION@.prefs.openLabel;"/>
+			<radiogroup id="openPref">
+				<radio label="&@EXTENSION@.prefs.openOpt0;"/>
+				<radio label="&@EXTENSION@.prefs.openOpt1;"/>
+				<radio label="&@EXTENSION@.prefs.openOpt2;"/>
+				<radio label="&@EXTENSION@.prefs.openOpt3;"/>
+			</radiogroup>
+		</groupbox>
+		<groupbox>
+			<caption label="&@EXTENSION@.prefs.variable;"/>
+			<label value="&@EXTENSION@.prefs.variableNote1;"/>
+			<label value="&@EXTENSION@.prefs.variableNote2;"/>
+			<hbox><textbox id="variable" maxwidth="40"/></hbox>
+			<label maxwidth="400">&@EXTENSION@.prefs.variableNote3;</label>
+		</groupbox>
+	</prefpane>
 	<script type="application/x-javascript" src="chrome://@EXTENSION@/content/@EXTENSION@Prefs.js"/>
-
-    <tabbox flex="1">
-        <tabs>
-            <tab label="&@EXTENSION@.prefs.tab1;"/>
-            <tab label="&@EXTENSION@.prefs.tab2;"/>
-        </tabs>
-        <tabpanels flex="1">
-            <tabpanel orient="vertical">
-                <label class="header" value="&@EXTENSION@.prefs.intro;" />
-                <label value="&@EXTENSION@.prefs.notes;" />
-
-                <separator class="thin"/>
-
-                <hbox>
-                    <button label="&@EXTENSION@.prefs.addButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.addItem();"/>
-                    <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.addFolderButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.addFolder();"/>
-                    <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.deleteButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.deleteItem('&@EXTENSION@.prefs.deleteConfirm;');"/>
-                    <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.moveUpButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.moveItem('up', '&@EXTENSION@.prefs.moveError;');"/>
-                    <spacer flex="1"/>
-                    <button label="&@EXTENSION@.prefs.moveDownButton;" style="min-width: 100px;" onclick="@EXTENSION@PrefsVar.moveItem('down', '&@EXTENSION@.prefs.moveError;');"/>
-                </hbox>
-
-                <separator class="thin"/>
-
-                <tree id="treeThing" height="200" flex="1" hidecolumnpicker="true" seltype="single" editable="true">
-                    <treecols>
-                        <treecol id="nameColumn" label="&@EXTENSION@.prefs.nameLabel;" flex="1" primary="true"/>
-                        <treecol id="urlColumn" label="&@EXTENSION@.prefs.urlLabel;" flex="2"/>
-                    </treecols>
-                    <treechildren id="rows"/>
-                </tree>
-
-            </tabpanel>
-            <tabpanel orient="vertical">
-                <groupbox orient="vertical">
-                    <caption label="&@EXTENSION@.prefs.openLabel;"/>
-
-                    <radiogroup id="openPref">
-                        <radio label="&@EXTENSION@.prefs.openOpt0;"/>
-                        <radio label="&@EXTENSION@.prefs.openOpt1;"/>
-                        <radio label="&@EXTENSION@.prefs.openOpt2;"/>
-                        <radio label="&@EXTENSION@.prefs.openOpt3;"/>
-                    </radiogroup>
-                </groupbox>
-                <groupbox orient="vertical">
-                    <caption label="&@EXTENSION@.prefs.variable;"/>
-                    <label value="&@EXTENSION@.prefs.variableNote1;"/>
-                    <label value="&@EXTENSION@.prefs.variableNote2;"/>
-                    <label value="&@EXTENSION@.prefs.variableNote3;"/>
-                    <textbox id="variable" style="width:20px"/>
-                </groupbox>
-            </tabpanel>
-        </tabpanels>
-    </tabbox>
-
-</dialog>
+</prefwindow>
