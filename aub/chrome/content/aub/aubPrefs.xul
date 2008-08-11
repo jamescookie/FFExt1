@@ -3,13 +3,11 @@
 <!DOCTYPE dialog SYSTEM "chrome://@EXTENSION@/locale/prefs.dtd">
 
 <prefwindow id="@EXTENSION@Prefs"
-	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-	buttons="accept, cancel"
-	onload="@EXTENSION@PrefsVar.init();"
-	ondialogaccept="return @EXTENSION@PrefsVar.accept();"
-	title="&@EXTENSION@.prefs.title;">
-
-    <prefpane id="pane1" label="&@EXTENSION@.prefs.tab1;">
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        onload="@EXTENSION@PrefsVar.init();"
+        ondialogaccept="return @EXTENSION@PrefsVar.accept();"
+        title="&@EXTENSION@.prefs.title;">
+	<prefpane id="pane1" label="&@EXTENSION@.prefs.tab1;">
 		<preferences/>
 		<groupbox>
 			<caption label="&@EXTENSION@.prefs.intro;"/>
@@ -46,10 +44,12 @@
 		</groupbox>
 		<groupbox>
 			<caption label="&@EXTENSION@.prefs.variable;"/>
-			<label value="&@EXTENSION@.prefs.variableNote1;"/>
-			<label value="&@EXTENSION@.prefs.variableNote2;"/>
-			<hbox><textbox id="variable" maxwidth="40"/></hbox>
-			<label maxwidth="400">&@EXTENSION@.prefs.variableNote3;</label>
+			<label>&@EXTENSION@.prefs.variableNote1;</label>
+			<label>&@EXTENSION@.prefs.variableNote2;</label>
+			<hbox>
+				<textbox id="variable" maxwidth="40"/>
+			</hbox>
+			<label style="width:400px">&@EXTENSION@.prefs.variableNote3;</label>
 		</groupbox>
 	</prefpane>
 	<script type="application/x-javascript" src="chrome://@EXTENSION@/content/@EXTENSION@Prefs.js"/>
