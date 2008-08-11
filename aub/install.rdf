@@ -10,6 +10,7 @@
 		<em:description>@DESCRIPTION@</em:description>
 		<em:creator>@AUTHOR@</em:creator>
 		<em:contributor>Jacqueline Cook</em:contributor>
+		<em:contributor>Leszek (teo) Życzkowski</em:contributor>
 		<em:homepageURL>@EXTENSIONS_URL@</em:homepageURL>
 		<em:iconURL>chrome://@EXTENSION@/skin/@EXTENSION@.png</em:iconURL>
 		<em:aboutURL>chrome://@EXTENSION@/content/about.xul</em:aboutURL>
