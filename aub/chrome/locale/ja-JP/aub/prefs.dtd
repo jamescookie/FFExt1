@@ -1,0 +1,31 @@
+<!ENTITY @EXTENSION@.prefs.title "@EXTENSION_FULL@ オプション">
+
+<!ENTITY @EXTENSION@.prefs.tab1 "URL">
+<!ENTITY @EXTENSION@.prefs.tab2 "そのほか">
+<!ENTITY @EXTENSION@.prefs.tab3 "About">
+
+<!ENTITY @EXTENSION@.prefs.intro "利用する URL をここで入力してください">
+<!ENTITY @EXTENSION@.prefs.notes "項目の編集 - ダブルクリック">
+
+<!ENTITY @EXTENSION@.prefs.addButton "追加">
+<!ENTITY @EXTENSION@.prefs.addFolderButton "フォルダを追加">
+<!ENTITY @EXTENSION@.prefs.deleteButton "削除">
+<!ENTITY @EXTENSION@.prefs.moveUpButton "上へ移動">
+<!ENTITY @EXTENSION@.prefs.moveDownButton "下へ移動">
+
+<!ENTITY @EXTENSION@.prefs.moveError "移動対象が選択されていなければなりません。">
+<!ENTITY @EXTENSION@.prefs.deleteConfirm "本当にこのフォルダとその中身すべてを削除しますか？">
+
+<!ENTITY @EXTENSION@.prefs.nameLabel "名前">
+<!ENTITY @EXTENSION@.prefs.urlLabel "URL">
+
+<!ENTITY @EXTENSION@.prefs.openLabel "URL をどこで開きますか？">
+<!ENTITY @EXTENSION@.prefs.openOpt0 "新しいタブで開く">
+<!ENTITY @EXTENSION@.prefs.openOpt1 "新しい背景のタブで開く">
+<!ENTITY @EXTENSION@.prefs.openOpt2 "新しいウィンドウで開く">
+<!ENTITY @EXTENSION@.prefs.openOpt3 "現在のタブで開く">
+
+<!ENTITY @EXTENSION@.prefs.variable "変数置換">
+<!ENTITY @EXTENSION@.prefs.variableNote1 "これをプレースホルダとして選択されたテキストが挿入される URL の中で利用してください。">
+<!ENTITY @EXTENSION@.prefs.variableNote2 "例えば「~S~」など通常の URL にはあまり出てこなさそうなものを使用すべきです。">
+<!ENTITY @EXTENSION@.prefs.variableNote3 "注意: これが空欄または URL の中に含まれない場合、選択されたテキストは URL の末尾に追加されます。">

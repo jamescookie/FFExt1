@@ -30,6 +30,11 @@
 				<em:skin>skin/classic/@EXTENSION@/</em:skin>
 				<em:locale>locale/en-GB/@EXTENSION@/</em:locale>
 				<em:locale>locale/en-US/@EXTENSION@/</em:locale>
+				<em:locale>locale/es-ES/@EXTENSION@/</em:locale>
+				<em:locale>locale/fr-FR/@EXTENSION@/</em:locale>
+				<em:locale>locale/ja-JP/@EXTENSION@/</em:locale>
+				<em:locale>locale/nl-NL/@EXTENSION@/</em:locale>
+				<em:locale>locale/pl-PL/@EXTENSION@/</em:locale>
 			</Description>
 		</em:file>
 

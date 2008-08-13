@@ -1,0 +1,31 @@
+<!ENTITY @EXTENSION@.prefs.title "@EXTENSION_FULL@ opties">
+
+<!ENTITY @EXTENSION@.prefs.tab1 "URL’s">
+<!ENTITY @EXTENSION@.prefs.tab2 "Diversen">
+<!ENTITY @EXTENSION@.prefs.tab3 "Over">
+
+<!ENTITY @EXTENSION@.prefs.intro "Voer hier de te gebruiken URL’s in">
+<!ENTITY @EXTENSION@.prefs.notes "Dubbelklik een onderdeel om het bewerken">
+
+<!ENTITY @EXTENSION@.prefs.addButton "Toevoegen">
+<!ENTITY @EXTENSION@.prefs.addFolderButton "Map toevoegen">
+<!ENTITY @EXTENSION@.prefs.deleteButton "Verwijderen">
+<!ENTITY @EXTENSION@.prefs.moveUpButton "Omhoog">
+<!ENTITY @EXTENSION@.prefs.moveDownButton "Omlaag">
+
+<!ENTITY @EXTENSION@.prefs.moveError "Er dient iets geselecteerd te worden om het te verplaatsen.">
+<!ENTITY @EXTENSION@.prefs.deleteConfirm "Weet u zeker dat u deze map en de volledige inhoud wilt verwijderen?">
+
+<!ENTITY @EXTENSION@.prefs.nameLabel "Naam">
+<!ENTITY @EXTENSION@.prefs.urlLabel "URL">
+
+<!ENTITY @EXTENSION@.prefs.openLabel "Waar wilt u de URL in openen?">
+<!ENTITY @EXTENSION@.prefs.openOpt0 "In een nieuw tabblad openen">
+<!ENTITY @EXTENSION@.prefs.openOpt1 "In een tabblad op de achtergrond openen">
+<!ENTITY @EXTENSION@.prefs.openOpt2 "In een nieuw venster openen">
+<!ENTITY @EXTENSION@.prefs.openOpt3 "In huidige venster openen">
+
+<!ENTITY @EXTENSION@.prefs.variable "Variabele vervanging">
+<!ENTITY @EXTENSION@.prefs.variableNote1 "Gebruik dit als een plaatshouder in de URL waar de geaccentueerde tekst zal worden ingevoegd.">
+<!ENTITY @EXTENSION@.prefs.variableNote2 "U dient iets te gebruiken dat normaliter niet in een URL voorkomt, zoals ‘~S~’.">
+<!ENTITY @EXTENSION@.prefs.variableNote3 "Opmerking: Indien u dit leeg laat of uw URL dit niet bevat zal de geaccentueerde tekst aan het einde van uw URL worden toegevoegd.">

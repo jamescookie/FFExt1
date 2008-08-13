@@ -1,0 +1,31 @@
+<!ENTITY @EXTENSION@.prefs.title "@EXTENSION_FULL@ - ustawienia">
+
+<!ENTITY @EXTENSION@.prefs.tab1 "Adresy URL">
+<!ENTITY @EXTENSION@.prefs.tab2 "Różne">
+<!ENTITY @EXTENSION@.prefs.tab3 "Info">
+
+<!ENTITY @EXTENSION@.prefs.intro "Wprowadź tutaj adres URL">
+<!ENTITY @EXTENSION@.prefs.notes "Aby edytować element, kliknij go dwukrotnie">
+
+<!ENTITY @EXTENSION@.prefs.addButton "Dodaj">
+<!ENTITY @EXTENSION@.prefs.addFolderButton "Dodaj folder">
+<!ENTITY @EXTENSION@.prefs.deleteButton "Usuń">
+<!ENTITY @EXTENSION@.prefs.moveUpButton "Przesuń w dół">
+<!ENTITY @EXTENSION@.prefs.moveDownButton "Przesuń w górę">
+
+<!ENTITY @EXTENSION@.prefs.moveError "Aby wykonać przesunięcie, trzeba najpierw zaznaczyć element">
+<!ENTITY @EXTENSION@.prefs.deleteConfirm "Czy na pewno chcesz usunąć ten folder z całą jego zawartością?">
+
+<!ENTITY @EXTENSION@.prefs.nameLabel "Nazwa">
+<!ENTITY @EXTENSION@.prefs.urlLabel "URL">
+
+<!ENTITY @EXTENSION@.prefs.openLabel "Adres URL otwieraj w:">
+<!ENTITY @EXTENSION@.prefs.openOpt0 "nowej karcie">
+<!ENTITY @EXTENSION@.prefs.openOpt1 "nowej karcie w tle">
+<!ENTITY @EXTENSION@.prefs.openOpt2 "nowyn oknie">
+<!ENTITY @EXTENSION@.prefs.openOpt3 "aktywnej karcie">
+
+<!ENTITY @EXTENSION@.prefs.variable "Zamienniki zmiennych">
+<!ENTITY @EXTENSION@.prefs.variableNote1 "Użyj tego zamiennika w adresach URL w miejscu, gdzie wyróżniony tekst będzie wstawiany">
+<!ENTITY @EXTENSION@.prefs.variableNote2 "Należy użyć coś, co zazwyczaj nie występuje w normalnych adresach URL - np.~S~">
+<!ENTITY @EXTENSION@.prefs.variableNote3 "Uwaga: Jeśli to pole pozostanie puste lub twój adres URL nie zawiera zamiennika, wyróżniony tekst będzie dołączony na końcu adresu">
