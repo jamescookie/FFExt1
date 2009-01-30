@@ -2,7 +2,6 @@
 
 <!ENTITY @EXTENSION@.prefs.tab1 "URL">
 <!ENTITY @EXTENSION@.prefs.tab2 "そのほか">
-<!ENTITY @EXTENSION@.prefs.tab3 "About">
 
 <!ENTITY @EXTENSION@.prefs.intro "利用する URL をここで入力してください">
 <!ENTITY @EXTENSION@.prefs.notes "項目の編集 - ダブルクリック">

@@ -2,7 +2,6 @@
 
 <!ENTITY @EXTENSION@.prefs.tab1 "URL’s">
 <!ENTITY @EXTENSION@.prefs.tab2 "Diversen">
-<!ENTITY @EXTENSION@.prefs.tab3 "Over">
 
 <!ENTITY @EXTENSION@.prefs.intro "Voer hier de te gebruiken URL’s in">
 <!ENTITY @EXTENSION@.prefs.notes "Dubbelklik een onderdeel om het bewerken">
@@ -27,5 +26,5 @@
 
 <!ENTITY @EXTENSION@.prefs.variable "Variabele vervanging">
 <!ENTITY @EXTENSION@.prefs.variableNote1 "Gebruik dit als een plaatshouder in de URL waar de geaccentueerde tekst zal worden ingevoegd.">
-<!ENTITY @EXTENSION@.prefs.variableNote2 "U dient iets te gebruiken dat normaliter niet in een URL voorkomt, zoals ‘~S~’.">
+<!ENTITY @EXTENSION@.prefs.variableNote2 "U dient iets te gebruiken dat normaliter niet in een URL voorkomt, zoals &quot;~S~&quot;.">
 <!ENTITY @EXTENSION@.prefs.variableNote3 "Opmerking: Indien u dit leeg laat of uw URL dit niet bevat zal de geaccentueerde tekst aan het einde van uw URL worden toegevoegd.">

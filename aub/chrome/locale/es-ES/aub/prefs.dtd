@@ -2,7 +2,6 @@
 
 <!ENTITY @EXTENSION@.prefs.tab1 "URLs">
 <!ENTITY @EXTENSION@.prefs.tab2 "Varios">
-<!ENTITY @EXTENSION@.prefs.tab3 "Acerca de">
 
 <!ENTITY @EXTENSION@.prefs.intro "Introduzca la dirección a usar">
 <!ENTITY @EXTENSION@.prefs.notes "Para editar un elemento - doble click sobre él">

@@ -2,11 +2,9 @@
 
 <!ENTITY @EXTENSION@.prefs.tab1 "URL">
 <!ENTITY @EXTENSION@.prefs.tab2 "Divers">
-<!ENTITY @EXTENSION@.prefs.tab3 "A propos">
 
 <!ENTITY @EXTENSION@.prefs.intro "Entrez les URL que vous utilisez ici">
-<!ENTITY @EXTENSION@.prefs.notes "Pour éditer un item, double-cliquez dessus">
-
+<!ENTITY @EXTENSION@.prefs.notes "Pour éditer un élément, double-cliquez dessus">
 <!ENTITY @EXTENSION@.prefs.addButton "Ajouter">
 <!ENTITY @EXTENSION@.prefs.addFolderButton "Ajouter un dossier">
 <!ENTITY @EXTENSION@.prefs.deleteButton "Supprimer">
@@ -28,4 +26,4 @@
 <!ENTITY @EXTENSION@.prefs.variable "Substitution de variables">
 <!ENTITY @EXTENSION@.prefs.variableNote1 "Utilisez ceci comme un remplacement dans l&apos;URL où le texte surligné sera inséré.">
 <!ENTITY @EXTENSION@.prefs.variableNote2 "Vous devriez utiliser quelque chose qui n&apos;est pas utilisé dans les URL, comme &apos;~S~&apos;.">
-<!ENTITY @EXTENSION@.prefs.variableNote3 "Note : si ceci est laissé ou que votre URL ne le contient pas, le texte surligné sera ajouté à la fin de votre URL.">
+<!ENTITY @EXTENSION@.prefs.variableNote3 "Note : si ceci est laissé vide ou que votre URL ne le contient pas, le texte surligné sera ajouté à la fin de votre URL.">

@@ -3,7 +3,6 @@
 
 <!ENTITY @EXTENSION@.prefs.tab1 "URLs">
 <!ENTITY @EXTENSION@.prefs.tab2 "Misc">
-<!ENTITY @EXTENSION@.prefs.tab3 "About">
 
 <!--tab 1-->
 <!ENTITY @EXTENSION@.prefs.intro "Enter the URLs to use here">
@@ -30,6 +29,6 @@
 
 <!ENTITY @EXTENSION@.prefs.variable "Variable Substitution">
 <!ENTITY @EXTENSION@.prefs.variableNote1 "Use this as a place-holder in the URL where the highlighted text will be inserted.">
-<!ENTITY @EXTENSION@.prefs.variableNote2 "You should use something that is not likely to appear in normal URLs such as '~S~'.">
+<!ENTITY @EXTENSION@.prefs.variableNote2 "You should use something that is not likely to appear in normal URLs such as &quot;~S~&quot;.">
 <!ENTITY @EXTENSION@.prefs.variableNote3 "Note: If this is left blank or your URL does not have this in it, then the highlighted text will be appended to the end of your URL.">
 

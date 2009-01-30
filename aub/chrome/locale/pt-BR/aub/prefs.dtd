@@ -1,0 +1,30 @@
+<!ENTITY @EXTENSION@.prefs.title "Opções do @EXTENSION_FULL@">
+
+<!ENTITY @EXTENSION@.prefs.tab1 "URLs">
+<!ENTITY @EXTENSION@.prefs.tab2 "Opções">
+
+<!ENTITY @EXTENSION@.prefs.intro "Insira as URLs a serem usadas aqui">
+<!ENTITY @EXTENSION@.prefs.notes "Para editar um item, dê um duplo-click nele">
+
+<!ENTITY @EXTENSION@.prefs.addButton "Adicionar">
+<!ENTITY @EXTENSION@.prefs.addFolderButton "Adicionar Pasta">
+<!ENTITY @EXTENSION@.prefs.deleteButton "Remover">
+<!ENTITY @EXTENSION@.prefs.moveUpButton "Subir">
+<!ENTITY @EXTENSION@.prefs.moveDownButton "Descer">
+
+<!ENTITY @EXTENSION@.prefs.moveError "Alguma coisa precisa estar selecionada para ser movida.">
+<!ENTITY @EXTENSION@.prefs.deleteConfirm "Tem certeza que quer apagar esta pasta e todo o seu conteúdo?">
+
+<!ENTITY @EXTENSION@.prefs.nameLabel "Nome">
+<!ENTITY @EXTENSION@.prefs.urlLabel "URL">
+
+<!ENTITY @EXTENSION@.prefs.openLabel "Aonde você quer que a URL seja aberta?">
+<!ENTITY @EXTENSION@.prefs.openOpt0 "Abrir em nova aba">
+<!ENTITY @EXTENSION@.prefs.openOpt1 "Abrir em nova aba em segundo plano">
+<!ENTITY @EXTENSION@.prefs.openOpt2 "Abrir em uma nova janela">
+<!ENTITY @EXTENSION@.prefs.openOpt3 "Abrir na mesma aba">
+
+<!ENTITY @EXTENSION@.prefs.variable "Substituição de Variável">
+<!ENTITY @EXTENSION@.prefs.variableNote1 "Use isto como um marcador na URL onde o texto realçado será inserido.">
+<!ENTITY @EXTENSION@.prefs.variableNote2 "Você deve usar algo que não aparece normalmente em URLs, tal como &apos;~S~&apos;.">
+<!ENTITY @EXTENSION@.prefs.variableNote3 "Nota: Se for deixado vazio ou sua URL não contiver isso, o texto realçado será adicionado ao final da URL.">
