@@ -1,0 +1,13 @@
+1) ENHANCEMENT - variable substitution
+to do something similar to the 'variable substitution' option - like you type something (for example ',') and the programme opens multiple tabs divided by ','
+EXAMPLE: for google search: you highlight text - auto,mummy,ode - and your programme opens 3 tabs witch search results for auto and mummy and ode!
+
+2) BUG - stange options
+Open options through add-on manager, add a URL, bring up context menu, item is not there!
+
+3) ENHANCEMENT - special chars ????? This seems to work ?????
+it seems that Advanced URL Builder could not support wide characters (such as Asia language) well.
+I failed to use it to search a Chinese word in Google or  Wikipedia (zh-encoding version, i.e. http://zh.wikipedia.org).
+For instance, when searching the simplified Chinese (zh-CN) translation of the word "Wiki", the quarried part of the URL shown by Google or Wikipedia are both "%E7%BB%B4%E5%9F%BA", which should be encoded in UTF-8. 
+Unfortunately, the URL built by Advanced URL Builder is "%CE%AC%BB%F9", which should be the "inner code" for my locale setting (i.e. zh-CN).
+
