@@ -81,8 +81,6 @@ var @EXTENSION@Var = {
 
         if ((node instanceof HTMLTextAreaElement) || (node instanceof HTMLInputElement && node.type == "text")) {
             selection = node.value.substring(node.selectionStart, node.selectionEnd);
-        } else if (gContextMenu.onLink) {
-            selection = gContextMenu.linkURL;
         } else {
             try {
                 selection = getBrowserSelection();  // firefox 2+
@@ -91,8 +89,12 @@ var @EXTENSION@Var = {
             }
         }
 
-        if (selection.length >= 255){
+        if (selection.length >= 255) {
             selection = selection.substring(0, 254);
+        }
+
+        if (selection == "" && gContextMenu.onLink) {
+            selection = gContextMenu.linkURL;
         }
 
         return selection;
