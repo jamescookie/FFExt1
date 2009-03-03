@@ -16,31 +16,14 @@
 		<em:aboutURL>chrome://@EXTENSION@/content/about.xul</em:aboutURL>
 		<em:optionsURL>chrome://@EXTENSION@/content/@EXTENSION@Prefs.xul</em:optionsURL>
 
-		<em:targetApplication>
+        <!-- Firefox -->
+        <em:targetApplication>
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>3.0</em:minVersion>
-				<em:maxVersion>3.1b2</em:maxVersion>
+				<em:maxVersion>3.1b3</em:maxVersion>
 			</Description>
 		</em:targetApplication>
-
-		<em:file>
-			<Description about="urn:mozilla:extension:file:@EXTENSION@.jar">
-				<em:package>content/@EXTENSION@/</em:package>
-				<em:skin>skin/classic/@EXTENSION@/</em:skin>
-				<em:locale>locale/cs-CZ/@EXTENSION@/</em:locale>
-				<em:locale>locale/de-DE/@EXTENSION@/</em:locale>
-				<em:locale>locale/en-GB/@EXTENSION@/</em:locale>
-				<em:locale>locale/en-US/@EXTENSION@/</em:locale>
-				<em:locale>locale/es-ES/@EXTENSION@/</em:locale>
-				<em:locale>locale/fr-FR/@EXTENSION@/</em:locale>
-				<em:locale>locale/ja-JP/@EXTENSION@/</em:locale>
-				<em:locale>locale/nl-NL/@EXTENSION@/</em:locale>
-				<em:locale>locale/pl-PL/@EXTENSION@/</em:locale>
-				<em:locale>locale/pt-BR/@EXTENSION@/</em:locale>
-				<em:locale>locale/uk-UA/@EXTENSION@/</em:locale>
-			</Description>
-		</em:file>
 
 	</Description>
 
