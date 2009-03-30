@@ -11,3 +11,12 @@ I failed to use it to search a Chinese word in Google or  Wikipedia (zh-encoding
 For instance, when searching the simplified Chinese (zh-CN) translation of the word "Wiki", the quarried part of the URL shown by Google or Wikipedia are both "%E7%BB%B4%E5%9F%BA", which should be encoded in UTF-8. 
 Unfortunately, the URL built by Advanced URL Builder is "%CE%AC%BB%F9", which should be the "inner code" for my locale setting (i.e. zh-CN).
 
+4) BUG - Mac users
+Possibly does not save when using via a mac. Guilty options could be some combination of
+browser.preferences.instantApply and browser.preferences.animateFadeIn
+See: https://developer.mozilla.org/En/XUL:prefwindow
+http://mxr.mozilla.org/mozilla1.8/source/browser/components/preferences/preferences.xul#78
+https://bugzilla.mozilla.org/show_bug.cgi?id=283697#c128
+http://bugs.code.downthemall.net/trac/changeset/590
+http://forums.mozillazine.org/viewtopic.php?f=19&t=698285&p=3597925
+http://praveenmatanam.wordpress.com/2007/02/
