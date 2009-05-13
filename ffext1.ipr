@@ -53,6 +53,7 @@
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
     <option name="MAXIMUM_HEAP_SIZE" value="128" />
   </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
@@ -193,7 +194,8 @@
         <inspection_tool class="InstanceofCatchParameter" level="WARNING" enabled="false" />
         <inspection_tool class="SingleCharacterStartsWith" level="WARNING" enabled="false" />
         <inspection_tool class="ImplicitNumericConversion" level="WARNING" enabled="false">
-          <option name="m_ignoreWideningConversions" value="false" />
+          <option name="ignoreWideningConversions" value="false" />
+          <option name="ignoreCharConversions" value="false" />
         </inspection_tool>
         <inspection_tool class="UnnecessaryInterfaceModifier" level="WARNING" enabled="false" />
         <inspection_tool class="InstanceVariableInitialization" level="WARNING" enabled="false">
@@ -446,7 +448,9 @@
           <option name="m_maxLength" value="32" />
         </inspection_tool>
         <inspection_tool class="CheckedExceptionClass" level="WARNING" enabled="false" />
-        <inspection_tool class="CastThatLosesPrecision" level="WARNING" enabled="false" />
+        <inspection_tool class="CastThatLosesPrecision" level="WARNING" enabled="false">
+          <option name="ignoreIntegerCharCasts" value="false" />
+        </inspection_tool>
         <inspection_tool class="SwitchStatementWithConfusingDeclaration" level="WARNING" enabled="false" />
         <inspection_tool class="EmptyTryBlock" level="WARNING" enabled="false" />
         <inspection_tool class="ManualArrayCopy" level="WARNING" enabled="false" />
@@ -457,8 +461,13 @@
         <inspection_tool class="OverlyComplexArithmeticExpression" level="WARNING" enabled="false">
           <option name="m_limit" value="6" />
         </inspection_tool>
-        <inspection_tool class="ConditionalExpression" level="WARNING" enabled="false" />
-        <inspection_tool class="UnnecessaryParentheses" level="WARNING" enabled="false" />
+        <inspection_tool class="ConditionalExpression" level="WARNING" enabled="false">
+          <option name="ignoreSimpleAssignmentsAndReturns" value="false" />
+        </inspection_tool>
+        <inspection_tool class="UnnecessaryParentheses" level="WARNING" enabled="false">
+          <option name="ignoreClarifyingParentheses" value="false" />
+          <option name="ignoreParenthesesOnConditionals" value="false" />
+        </inspection_tool>
         <inspection_tool class="AssignmentToMethodParameter" level="WARNING" enabled="false">
           <option name="ignoreTransformationOfOriginalParameter" value="false" />
         </inspection_tool>
@@ -491,7 +500,6 @@
         <inspection_tool class="UnusedCatchParameter" level="WARNING" enabled="false">
           <option name="m_ignoreCatchBlocksWithComments" value="false" />
           <option name="m_ignoreTestCases" value="false" />
-          <option name="m_ignoreIgnoreParameter" value="true" />
         </inspection_tool>
         <inspection_tool class="ClassInTopLevelPackage" level="WARNING" enabled="false" />
         <inspection_tool class="FieldAccessedSynchronizedAndUnsynchronized" level="WARNING" enabled="false">
@@ -543,7 +551,9 @@
           <option name="ignoreTestCases" value="false" />
         </inspection_tool>
         <inspection_tool class="ConstantDeclaredInAbstractClass" level="WARNING" enabled="false" />
-        <inspection_tool class="TooBroadCatch" level="WARNING" enabled="false" />
+        <inspection_tool class="TooBroadCatch" level="WARNING" enabled="false">
+          <option name="onlyWarnOnRootExceptions" value="false" />
+        </inspection_tool>
         <inspection_tool class="FloatingPointEquality" level="WARNING" enabled="false" />
         <inspection_tool class="ReplaceAssignmentWithOperatorAssignment" level="WARNING" enabled="false">
           <option name="ignoreLazyOperators" value="true" />
@@ -799,13 +809,16 @@
       </item>
     </group>
   </component>
+  <component name="ProjectDetails">
+    <option name="projectName" value="ffext1" />
+  </component>
   <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ffext1.iml" filepath="$PROJECT_DIR$/ffext1.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="1.5.0" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.5.0" />
   <component name="ResourceManagerContainer">
     <option name="myResourceBundles">
       <value>
@@ -819,6 +832,63 @@
     <option name="GENERATE_NO_WARNINGS" value="false" />
     <option name="GENERATE_IIOP_STUBS" value="false" />
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchMap">
+                <map>
+                  <entry key="http://192.168.0.10/svn/FFext/branches">
+                    <value>
+                      <list>
+                        <SvnBranchItem>
+                          <option name="creationDateMillis" value="1159390505000" />
+                          <option name="revision" value="23" />
+                          <option name="url" value="http://192.168.0.10/svn/FFext/branches/aaa" />
+                        </SvnBranchItem>
+                        <SvnBranchItem>
+                          <option name="creationDateMillis" value="1130193625000" />
+                          <option name="revision" value="6" />
+                          <option name="url" value="http://192.168.0.10/svn/FFext/branches/pants" />
+                        </SvnBranchItem>
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="http://192.168.0.10/svn/FFext/tags">
+                    <value>
+                      <list>
+                        <SvnBranchItem>
+                          <option name="creationDateMillis" value="1159390506000" />
+                          <option name="revision" value="25" />
+                          <option name="url" value="http://192.168.0.10/svn/FFext/tags/v01" />
+                        </SvnBranchItem>
+                        <SvnBranchItem>
+                          <option name="creationDateMillis" value="1130193626000" />
+                          <option name="revision" value="8" />
+                          <option name="url" value="http://192.168.0.10/svn/FFext/tags/V0_5_18" />
+                        </SvnBranchItem>
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="branchUrls">
+                <list>
+                  <option value="http://192.168.0.10/svn/FFext/branches" />
+                  <option value="http://192.168.0.10/svn/FFext/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="http://192.168.0.10/svn/FFext/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="myVersion" value="124" />
+    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="svn" />
