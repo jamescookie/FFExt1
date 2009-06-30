@@ -1,0 +1,26 @@
+<!--  Options  -->
+<!ENTITY @EXTENSION@.prefs.title "Опције напредног творца адреса">
+<!ENTITY @EXTENSION@.prefs.tab1 "Адресе">
+<!ENTITY @EXTENSION@.prefs.tab2 "Разно">
+<!-- tab 1 -->
+<!ENTITY @EXTENSION@.prefs.intro "Овде унесите адресе које ћете да користите">
+<!ENTITY @EXTENSION@.prefs.notes "Да бисте уредили ставку, кликните дуплим кликом">
+<!ENTITY @EXTENSION@.prefs.addButton "Додај">
+<!ENTITY @EXTENSION@.prefs.addFolderButton "Додај фасциклу">
+<!ENTITY @EXTENSION@.prefs.deleteButton "Обриши">
+<!ENTITY @EXTENSION@.prefs.moveUpButton "Помери горе">
+<!ENTITY @EXTENSION@.prefs.moveDownButton "Помери доле">
+<!ENTITY @EXTENSION@.prefs.moveError "Морате да одаберете нешто да бисте могли да премештате.">
+<!ENTITY @EXTENSION@.prefs.deleteConfirm "Желите ли да избришете ову фасциклу и сав њен садржај?">
+<!ENTITY @EXTENSION@.prefs.nameLabel "Име">
+<!ENTITY @EXTENSION@.prefs.urlLabel "Адреса">
+<!-- tab 2 -->
+<!ENTITY @EXTENSION@.prefs.openLabel "Где желите да отворите адресу?">
+<!ENTITY @EXTENSION@.prefs.openOpt0 "у новом језичку">
+<!ENTITY @EXTENSION@.prefs.openOpt1 "у језичку у позадини">
+<!ENTITY @EXTENSION@.prefs.openOpt2 "у новом прозору">
+<!ENTITY @EXTENSION@.prefs.openOpt3 "у тренутном">
+<!ENTITY @EXTENSION@.prefs.variable "Замена променљивих">
+<!ENTITY @EXTENSION@.prefs.variableNote1 "Користите ово као држач у адреси где ће истакнути текст бити уметнут">
+<!ENTITY @EXTENSION@.prefs.variableNote2 "Требали бисте да користите нешто што се вероватно неће наћи у адреси (нпр. ~S~).">
+<!ENTITY @EXTENSION@.prefs.variableNote3 "Напомена: Ако ово оставите празно или ваша адреса не садржи ово, истакнути текст ће бити додат на крају адресе.">

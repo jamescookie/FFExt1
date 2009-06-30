@@ -1,29 +1,25 @@
+<!-- Options -->
 <!ENTITY @EXTENSION@.prefs.title "@EXTENSION_FULL@ - Optionen">
-
 <!ENTITY @EXTENSION@.prefs.tab1 "URLs">
 <!ENTITY @EXTENSION@.prefs.tab2 "Verschiedenes">
-
+<!-- tab 1 -->
 <!ENTITY @EXTENSION@.prefs.intro "Verwendete URLs hier einfügen">
 <!ENTITY @EXTENSION@.prefs.notes "Einen Eintrag zu ändern muss dieser einfach doppelgeklickt werden">
-
 <!ENTITY @EXTENSION@.prefs.addButton "Hinzufügen">
 <!ENTITY @EXTENSION@.prefs.addFolderButton "Verzeichnis hinzufügen">
 <!ENTITY @EXTENSION@.prefs.deleteButton "Löschen">
 <!ENTITY @EXTENSION@.prefs.moveUpButton "Nach oben verschieben">
 <!ENTITY @EXTENSION@.prefs.moveDownButton "Nach unten verschieben">
-
 <!ENTITY @EXTENSION@.prefs.moveError "Wenn etwas verschoben werden soll, muss es vorher markiert werden.">
 <!ENTITY @EXTENSION@.prefs.deleteConfirm "Sollen das Verzeichnis inklusive aller Unterverzeichnisse gelöscht werden?">
-
 <!ENTITY @EXTENSION@.prefs.nameLabel "Name">
 <!ENTITY @EXTENSION@.prefs.urlLabel "URL">
-
+<!-- tab 2 -->
 <!ENTITY @EXTENSION@.prefs.openLabel "Wo soll die URL geöffnet werden?">
 <!ENTITY @EXTENSION@.prefs.openOpt0 "In einem neuen Tab öffnen">
 <!ENTITY @EXTENSION@.prefs.openOpt1 "In einem neuen Tab öffnen (Hintergrund)">
 <!ENTITY @EXTENSION@.prefs.openOpt2 "In einem neuen Browserfenster öffnen">
 <!ENTITY @EXTENSION@.prefs.openOpt3 "In der aktuellen Ansicht öffnen">
-
 <!ENTITY @EXTENSION@.prefs.variable "Ersetzen von Variablen">
 <!ENTITY @EXTENSION@.prefs.variableNote1 "Diese Zeichenfolge dient als Platzhalter innerhalb der hinterlegten URL. An Stelle dieser Zeichen wird beim Öffnen der URL der markierten Text eingesetzt.">
 <!ENTITY @EXTENSION@.prefs.variableNote2 "Als Platzhalter sollte eine Zeichenfolge verwendet werden, die normalerweise nicht in einer URL auftaucht (z.B. &quot;~S~&quot;).">

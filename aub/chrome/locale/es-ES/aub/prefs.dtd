@@ -1,29 +1,25 @@
+<!-- Options -->
 <!ENTITY @EXTENSION@.prefs.title "@EXTENSION_FULL@ - Opciones">
-
 <!ENTITY @EXTENSION@.prefs.tab1 "URLs">
 <!ENTITY @EXTENSION@.prefs.tab2 "Varios">
-
+<!-- tab 1 -->
 <!ENTITY @EXTENSION@.prefs.intro "Introduzca la dirección a usar">
 <!ENTITY @EXTENSION@.prefs.notes "Para editar un elemento - doble click sobre él">
-
 <!ENTITY @EXTENSION@.prefs.addButton "Añadir">
 <!ENTITY @EXTENSION@.prefs.addFolderButton "Añadir carpeta">
 <!ENTITY @EXTENSION@.prefs.deleteButton "Borrar">
 <!ENTITY @EXTENSION@.prefs.moveUpButton "Subir">
 <!ENTITY @EXTENSION@.prefs.moveDownButton "Bajar">
-
 <!ENTITY @EXTENSION@.prefs.moveError "Debe seleccionar algún elemento para moverlo">
 <!ENTITY @EXTENSION@.prefs.deleteConfirm "¿Confirma que quiere borrar esta carpeta y todo su contenido?">
-
 <!ENTITY @EXTENSION@.prefs.nameLabel "Nombre">
 <!ENTITY @EXTENSION@.prefs.urlLabel "URL">
-
+<!-- tab 2 -->
 <!ENTITY @EXTENSION@.prefs.openLabel "¿Donde quiere abrir la URL?">
 <!ENTITY @EXTENSION@.prefs.openOpt0 "Una nueva pestaña">
 <!ENTITY @EXTENSION@.prefs.openOpt1 "Una pestaña en segundo plano">
 <!ENTITY @EXTENSION@.prefs.openOpt2 "Una nueva ventana">
 <!ENTITY @EXTENSION@.prefs.openOpt3 "En la pestaña actual">
-
 <!ENTITY @EXTENSION@.prefs.variable "Sustitución de variables">
 <!ENTITY @EXTENSION@.prefs.variableNote1 "Use estos caracteres como una marca de posición en la dirección donde el texto marcado será insertado.">
 <!ENTITY @EXTENSION@.prefs.variableNote2 "Debe usar algo que no aparezca normalmente en una dirección, como por ejemplo &apos;~S~&apos;.">

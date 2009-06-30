@@ -1,30 +1,26 @@
+<!-- Options -->
 <!ENTITY @EXTENSION@.prefs.title "@EXTENSION_FULL@ ã‚ªãƒ—ã‚·ãƒ§ãƒ³">
-
 <!ENTITY @EXTENSION@.prefs.tab1 "URL">
-<!ENTITY @EXTENSION@.prefs.tab2 "ãã®ã»ã‹">
-
-<!ENTITY @EXTENSION@.prefs.intro "åˆ©ç”¨ã™ã‚‹ URL ã‚’ã“ã“ã§å…¥åŠ›ã—ã¦ãã ã•ã„">
-<!ENTITY @EXTENSION@.prefs.notes "é …ç›®ã®ç·¨é›† - ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯">
-
+<!ENTITY @EXTENSION@.prefs.tab2 "ã??ã?®ã?»ã?‹">
+<!-- tab 1 -->
+<!ENTITY @EXTENSION@.prefs.intro "åˆ©ç”¨ã?™ã‚‹ URL ã‚’ã?“ã?“ã?§å…¥åŠ›ã?—ã?¦ã??ã? ã?•ã?„">
+<!ENTITY @EXTENSION@.prefs.notes "é …ç›®ã?®ç·¨é›† - ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯">
 <!ENTITY @EXTENSION@.prefs.addButton "è¿½åŠ ">
 <!ENTITY @EXTENSION@.prefs.addFolderButton "ãƒ•ã‚©ãƒ«ãƒ€ã‚’è¿½åŠ ">
 <!ENTITY @EXTENSION@.prefs.deleteButton "å‰Šé™¤">
-<!ENTITY @EXTENSION@.prefs.moveUpButton "ä¸Šã¸ç§»å‹•">
-<!ENTITY @EXTENSION@.prefs.moveDownButton "ä¸‹ã¸ç§»å‹•">
-
-<!ENTITY @EXTENSION@.prefs.moveError "ç§»å‹•å¯¾è±¡ãŒé¸æŠžã•ã‚Œã¦ã„ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“ã€‚">
-<!ENTITY @EXTENSION@.prefs.deleteConfirm "æœ¬å½“ã«ã“ã®ãƒ•ã‚©ãƒ«ãƒ€ã¨ãã®ä¸­èº«ã™ã¹ã¦ã‚’å‰Šé™¤ã—ã¾ã™ã‹ï¼Ÿ">
-
-<!ENTITY @EXTENSION@.prefs.nameLabel "åå‰">
+<!ENTITY @EXTENSION@.prefs.moveUpButton "ä¸Šã?¸ç§»å‹•">
+<!ENTITY @EXTENSION@.prefs.moveDownButton "ä¸‹ã?¸ç§»å‹•">
+<!ENTITY @EXTENSION@.prefs.moveError "ç§»å‹•å¯¾è±¡ã?Œé?¸æŠžã?•ã‚Œã?¦ã?„ã?ªã?‘ã‚Œã?°ã?ªã‚Šã?¾ã?›ã‚“ã€‚">
+<!ENTITY @EXTENSION@.prefs.deleteConfirm "æœ¬å½“ã?«ã?“ã?®ãƒ•ã‚©ãƒ«ãƒ€ã?¨ã??ã?®ä¸­èº«ã?™ã?¹ã?¦ã‚’å‰Šé™¤ã?—ã?¾ã?™ã?‹ï¼Ÿ">
+<!ENTITY @EXTENSION@.prefs.nameLabel "å??å‰?">
 <!ENTITY @EXTENSION@.prefs.urlLabel "URL">
-
-<!ENTITY @EXTENSION@.prefs.openLabel "URL ã‚’ã©ã“ã§é–‹ãã¾ã™ã‹ï¼Ÿ">
-<!ENTITY @EXTENSION@.prefs.openOpt0 "æ–°ã—ã„ã‚¿ãƒ–ã§é–‹ã">
-<!ENTITY @EXTENSION@.prefs.openOpt1 "æ–°ã—ã„èƒŒæ™¯ã®ã‚¿ãƒ–ã§é–‹ã">
-<!ENTITY @EXTENSION@.prefs.openOpt2 "æ–°ã—ã„ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã§é–‹ã">
-<!ENTITY @EXTENSION@.prefs.openOpt3 "ç¾åœ¨ã®ã‚¿ãƒ–ã§é–‹ã">
-
-<!ENTITY @EXTENSION@.prefs.variable "å¤‰æ•°ç½®æ›">
-<!ENTITY @EXTENSION@.prefs.variableNote1 "ã“ã‚Œã‚’ãƒ—ãƒ¬ãƒ¼ã‚¹ãƒ›ãƒ«ãƒ€ã¨ã—ã¦é¸æŠžã•ã‚ŒãŸãƒ†ã‚­ã‚¹ãƒˆãŒæŒ¿å…¥ã•ã‚Œã‚‹ URL ã®ä¸­ã§åˆ©ç”¨ã—ã¦ãã ã•ã„ã€‚">
-<!ENTITY @EXTENSION@.prefs.variableNote2 "ä¾‹ãˆã°ã€Œ~S~ã€ãªã©é€šå¸¸ã® URL ã«ã¯ã‚ã¾ã‚Šå‡ºã¦ã“ãªã•ãã†ãªã‚‚ã®ã‚’ä½¿ç”¨ã™ã¹ãã§ã™ã€‚">
-<!ENTITY @EXTENSION@.prefs.variableNote3 "æ³¨æ„: ã“ã‚ŒãŒç©ºæ¬„ã¾ãŸã¯ URL ã®ä¸­ã«å«ã¾ã‚Œãªã„å ´åˆã€é¸æŠžã•ã‚ŒãŸãƒ†ã‚­ã‚¹ãƒˆã¯ URL ã®æœ«å°¾ã«è¿½åŠ ã•ã‚Œã¾ã™ã€‚">
+<!-- tab 2 -->
+<!ENTITY @EXTENSION@.prefs.openLabel "URL ã‚’ã?©ã?“ã?§é–‹ã??ã?¾ã?™ã?‹ï¼Ÿ">
+<!ENTITY @EXTENSION@.prefs.openOpt0 "æ–°ã?—ã?„ã‚¿ãƒ–ã?§é–‹ã??">
+<!ENTITY @EXTENSION@.prefs.openOpt1 "æ–°ã?—ã?„èƒŒæ™¯ã?®ã‚¿ãƒ–ã?§é–‹ã??">
+<!ENTITY @EXTENSION@.prefs.openOpt2 "æ–°ã?—ã?„ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã?§é–‹ã??">
+<!ENTITY @EXTENSION@.prefs.openOpt3 "ç?¾åœ¨ã?®ã‚¿ãƒ–ã?§é–‹ã??">
+<!ENTITY @EXTENSION@.prefs.variable "å¤‰æ•°ç½®æ?›">
+<!ENTITY @EXTENSION@.prefs.variableNote1 "ã?“ã‚Œã‚’ãƒ—ãƒ¬ãƒ¼ã‚¹ãƒ›ãƒ«ãƒ€ã?¨ã?—ã?¦é?¸æŠžã?•ã‚Œã?Ÿãƒ†ã‚­ã‚¹ãƒˆã?ŒæŒ¿å…¥ã?•ã‚Œã‚‹ URL ã?®ä¸­ã?§åˆ©ç”¨ã?—ã?¦ã??ã? ã?•ã?„ã€‚">
+<!ENTITY @EXTENSION@.prefs.variableNote2 "ä¾‹ã?ˆã?°ã€Œ~S~ã€?ã?ªã?©é€šå¸¸ã?® URL ã?«ã?¯ã?‚ã?¾ã‚Šå‡ºã?¦ã?“ã?ªã?•ã??ã?†ã?ªã‚‚ã?®ã‚’ä½¿ç”¨ã?™ã?¹ã??ã?§ã?™ã€‚">
+<!ENTITY @EXTENSION@.prefs.variableNote3 "æ³¨æ„?: ã?“ã‚Œã?Œç©ºæ¬„ã?¾ã?Ÿã?¯ URL ã?®ä¸­ã?«å?«ã?¾ã‚Œã?ªã?„å ´å?ˆã€?é?¸æŠžã?•ã‚Œã?Ÿãƒ†ã‚­ã‚¹ãƒˆã?¯ URL ã?®æœ«å°¾ã?«è¿½åŠ ã?•ã‚Œã?¾ã?™ã€‚">

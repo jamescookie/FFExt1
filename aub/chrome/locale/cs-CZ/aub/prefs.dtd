@@ -1,29 +1,25 @@
+<!-- Options -->
 <!ENTITY @EXTENSION@.prefs.title "Možnosti rozšíření @EXTENSION_FULL@">
-
 <!ENTITY @EXTENSION@.prefs.tab1 "Seznam URL">
 <!ENTITY @EXTENSION@.prefs.tab2 "Různé">
-
+<!-- tab 1 -->
 <!ENTITY @EXTENSION@.prefs.intro "Zadejte zde seznam URL">
 <!ENTITY @EXTENSION@.prefs.notes "Dvojklepněte na položku, pokud ji chcete upravit">
-
 <!ENTITY @EXTENSION@.prefs.addButton "Přidat">
 <!ENTITY @EXTENSION@.prefs.addFolderButton "Přidat složku">
 <!ENTITY @EXTENSION@.prefs.deleteButton "Smazat">
 <!ENTITY @EXTENSION@.prefs.moveUpButton "Posunout nahoru">
 <!ENTITY @EXTENSION@.prefs.moveDownButton "Posunout dolů">
-
 <!ENTITY @EXTENSION@.prefs.moveError "Musíte vybrat položku, abyste ji mohli posunout">
 <!ENTITY @EXTENSION@.prefs.deleteConfirm "Jste si jistí, že chcete smazat tuto složku a veškerý její obsah?">
-
 <!ENTITY @EXTENSION@.prefs.nameLabel "Jméno">
 <!ENTITY @EXTENSION@.prefs.urlLabel "URL">
-
+<!-- tab 2 -->
 <!ENTITY @EXTENSION@.prefs.openLabel "Jak se má URL otevřít?">
 <!ENTITY @EXTENSION@.prefs.openOpt0 "Otevřít v novém panelu">
 <!ENTITY @EXTENSION@.prefs.openOpt1 "Otevřít v novém panelu na pozadí">
 <!ENTITY @EXTENSION@.prefs.openOpt2 "Otevřít v novém okně">
 <!ENTITY @EXTENSION@.prefs.openOpt3 "Otevřít v aktuálním panelu">
-
 <!ENTITY @EXTENSION@.prefs.variable "Nahrazení proměnných">
 <!ENTITY @EXTENSION@.prefs.variableNote1 "Použijte tuto možnost jako zástupný text v URL, kam bude vložen zvýrazněný text na stránce.">
 <!ENTITY @EXTENSION@.prefs.variableNote2 "Měli byste použít sekvenci, která se pravděpodobně v běžných URL neobjeví, jako například &apos;~$~&apos;.">
