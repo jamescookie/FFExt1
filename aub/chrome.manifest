@@ -10,9 +10,7 @@ locale	@EXTENSION@	en-GB   	jar:chrome/@EXTENSION@.jar!/locale/en-GB/@EXTENSION@
 locale	@EXTENSION@	en-US   	jar:chrome/@EXTENSION@.jar!/locale/en-US/@EXTENSION@/
 locale	@EXTENSION@	es-ES   	jar:chrome/@EXTENSION@.jar!/locale/es-ES/@EXTENSION@/
 locale	@EXTENSION@	fr-FR   	jar:chrome/@EXTENSION@.jar!/locale/fr-FR/@EXTENSION@/
-locale	@EXTENSION@	ja-JP   	jar:chrome/@EXTENSION@.jar!/locale/ja-JP/@EXTENSION@/
 locale	@EXTENSION@	nl-NL   	jar:chrome/@EXTENSION@.jar!/locale/nl-NL/@EXTENSION@/
 locale	@EXTENSION@	pl-PL   	jar:chrome/@EXTENSION@.jar!/locale/pl-PL/@EXTENSION@/
 locale	@EXTENSION@	pt-BR   	jar:chrome/@EXTENSION@.jar!/locale/pt-BR/@EXTENSION@/
 locale	@EXTENSION@	sr-RS   	jar:chrome/@EXTENSION@.jar!/locale/sr-RS/@EXTENSION@/
-locale	@EXTENSION@	uk-UA   	jar:chrome/@EXTENSION@.jar!/locale/uk-UA/@EXTENSION@/
