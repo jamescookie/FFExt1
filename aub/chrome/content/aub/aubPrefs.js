@@ -12,6 +12,7 @@ init: function() {
     var childCounter = count;
     var stackPointer = 0;
 
+    document.documentElement.getButton("accept").hidden = false;
     document.getElementById("openPref").selectedIndex = @EXTENSION@PrefsVar.getIntegerPreferenceValue("open", prefs, 1);
     document.getElementById("variable").value = @EXTENSION@PrefsVar.getCharacterPreferenceValue("variable", prefs, "");
 
@@ -186,4 +187,4 @@ saveIntField: function(fieldName, newValue, prefs) {
 getTree: function() {
     return document.getElementById("treeThing");
 }
-}
+};
