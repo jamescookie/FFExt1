@@ -88,7 +88,8 @@
         <inspection_tool class="FinalPrivateMethod" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="FinalStaticMethod" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="FinalizeCallsSuperFinalize" enabled="false" level="WARNING" enabled_by_default="false">
-          <option name="m_ignoreForObjectSubclasses" value="false" />
+          <option name="ignoreObjectSubclasses" value="false" />
+          <option name="ignoreTrivialFinalizers" value="true" />
         </inspection_tool>
         <inspection_tool class="ForCanBeForeach" enabled="false" level="WARNING" enabled_by_default="false">
           <option name="REPORT_INDEXED_LOOP" value="true" />
@@ -299,6 +300,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ffext1.iml" filepath="$PROJECT_DIR$/ffext1.iml" />
     </modules>
+  </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.5.0" />
   <component name="ResourceManagerContainer">
